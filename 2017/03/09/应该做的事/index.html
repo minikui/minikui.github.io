@@ -3,27 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>基于深度学习的自认语言处理 课程01 | 一切可以触摸到的都是代码</title>
+  <title>应该做的事 | 一切可以触摸到的都是代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="笔记
-
-任务一:配置作业环境
-安装配置docker和tensorflow，由于是在Mac下，所以安装基本上没有什么问题，装完docker，直接查找tensorflow镜像，然后装到本地即可。代码：">
+  <meta name="description" content="前些时间和朋友在聊天，记不起来前后聊些什么了，朋友就给我这么一张图，
+很好，干得漂亮">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于深度学习的自认语言处理 课程01">
-<meta property="og:url" content="https://minikui.github.io/2017/03/07/first-blog/index.html">
+<meta property="og:title" content="应该做的事">
+<meta property="og:url" content="https://minikui.github.io/2017/03/09/应该做的事/index.html">
 <meta property="og:site_name" content="一切可以触摸到的都是代码">
-<meta property="og:description" content="笔记
-
-任务一:配置作业环境
-安装配置docker和tensorflow，由于是在Mac下，所以安装基本上没有什么问题，装完docker，直接查找tensorflow镜像，然后装到本地即可。代码：">
-<meta property="og:updated_time" content="2017-03-08T07:37:53.000Z">
+<meta property="og:description" content="前些时间和朋友在聊天，记不起来前后聊些什么了，朋友就给我这么一张图，
+很好，干得漂亮">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/c59739b1ly1fdgl85bo0bj20c90bxmxq">
+<meta property="og:updated_time" content="2017-03-09T07:33:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于深度学习的自认语言处理 课程01">
-<meta name="twitter:description" content="笔记
-
-任务一:配置作业环境
-安装配置docker和tensorflow，由于是在Mac下，所以安装基本上没有什么问题，装完docker，直接查找tensorflow镜像，然后装到本地即可。代码：">
+<meta name="twitter:title" content="应该做的事">
+<meta name="twitter:description" content="前些时间和朋友在聊天，记不起来前后聊些什么了，朋友就给我这么一张图，
+很好，干得漂亮">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/c59739b1ly1fdgl85bo0bj20c90bxmxq">
   
     <link rel="alternate" href="/atom.xml" title="一切可以触摸到的都是代码" type="application/atom+xml">
   
@@ -91,14 +87,14 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-first-blog" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-应该做的事" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/03/07/first-blog/" class="article-date">
-  <time datetime="2017-03-07T08:24:21.000Z" itemprop="datePublished">2017-03-07</time>
+    <a href="/2017/03/09/应该做的事/" class="article-date">
+  <time datetime="2017-03-09T07:10:00.000Z" itemprop="datePublished">2017-03-09</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/日志/">日志</a>
+    <a class="article-category-link" href="/categories/原创/">原创</a>
   </div>
 
   </div>
@@ -109,7 +105,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      基于深度学习的自认语言处理 课程01
+      应该做的事
     </h1>
   
 
@@ -117,44 +113,20 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><hr>
-<ul>
-<li><p><strong>任务一</strong>:配置作业环境</p>
-<p>安装配置docker和tensorflow，由于是在Mac下，所以安装基本上没有什么问题，装完docker，直接查找tensorflow镜像，然后装到本地即可。代码：</p>
-</li>
-</ul>
+        <p>前些时间和朋友在聊天，记不起来前后聊些什么了，朋友就给我这么一张图，</p>
+<p><strong>很好，干得漂亮</strong></p>
 <a id="more"></a>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">docker search tensorflow</div><div class="line">docker pull tensorflow/tensorflow</div><div class="line">docker images</div><div class="line">docker run -it -p 8888:8888 tensorflow/tensorflow</div></pre></td></tr></table></figure>
-<p>  启动tensorflow以后，浏览器直接访问<a href="http://localhost:8888/" target="_blank" rel="external">http://localhost:8888/</a>。<br>  更多docker run参数设置，参考教程：<a href="http://www.runoob.com/docker/docker-tutorial.html" target="_blank" rel="external">Docker 教程</a></p>
-<blockquote>
-<p>在docker下面装完tensorflow镜像以后，就不用在本地安装<a href="http://jupyter.org/" target="_blank" rel="external">Jupyter notebook</a>和<a href="https://www.tensorflow.org/" target="_blank" rel="external">tensorflow</a>。每次使用的时候，直接启动docker，就可以使用打包完成的tensorflow镜像。</p>
-<ul>
-<li><strong>任务二</strong>:语料词频统计</li>
-</ul>
-</blockquote>
-<p>  基本和入学前的任务一致，只是需要做分词。采用jieba分词处理。主要分三个步骤：<br></p>
-<ol>
-<li><p>采用正则表达式，匹配出所有中文；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">re_str = u&quot;([\u4e00-\u9fff]+)&quot;</div><div class="line">re_pattern = re.compile(re_str)</div><div class="line">re_list = re_pattern.findall(my_file)</div></pre></td></tr></table></figure>
-</li>
-<li><p>调用jieba分词；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">result_words = []</div><div class="line">for words in re_list:</div><div class="line">    one_word = jieba.lcut(words)</div><div class="line">    result_words.extend(one_word)</div></pre></td></tr></table></figure>
-</li>
-<li><p>统计词频输出；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">counter = Counter(result_words).most_common(10)</div><div class="line">print (str(counter).decode(&quot;unicode-escape&quot;))</div></pre></td></tr></table></figure>
-<blockquote>
-<p>任务二主要是对词频的统计输出上有些疑问，自己采用的方法有些基础，而且应该是特别大众，主要是对python掌握得不够，对python的标准库以及各种类型了解不多，比如collections、re、pandas、Counter以及python的list、dict类型操作功能。还需要针对性的学习，可是对我来说课程任务驱动的学习，总是很难对一门语言有系统性地掌握，因为总是遇到一个问题需要某一个功能解决的时候，就针对这个功能去学习了，不容易形成体系。</p>
-</blockquote>
-</li>
-</ol>
+<p><img src="http://ww1.sinaimg.cn/large/c59739b1ly1fdgl85bo0bj20c90bxmxq" alt=""></p>
+<p>无言以对啊，自己很擅长给自己找借口。不得不说，这图上说的实际，什么才能提升你做事情的质量呢？生命中不同的时期就应该做不同的事情，选对了顺序，就是选对了人生。</p>
+<p>让自己每天都有事可做，该戒的需要节制。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://minikui.github.io/2017/03/07/first-blog/" data-id="cj022cq7z0008ko0gy83pi9o6" class="article-share-link">Partager</a>
+      <a data-url="https://minikui.github.io/2017/03/09/应该做的事/" data-id="cj022cq780000ko0g9lhyq4t7" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/感悟/">感悟</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日常/">日常</a></li></ul>
 
     </footer>
   </div>
@@ -162,19 +134,10 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-    <a href="/2017/03/09/纯白短腿猫日常/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
-        
-          纯白短腿猫日常
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/07/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/03/09/纯白短腿猫日常/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">hexo入门</div>
+      <div class="article-nav-title">纯白短腿猫日常</div>
     </a>
   
 </nav>
