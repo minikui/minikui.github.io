@@ -70,9 +70,9 @@ ga('send', 'pageview');
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://minikui.github.io"></form>
@@ -82,6 +82,161 @@ ga('send', 'pageview');
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-概率语言模型：N-gram" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/12/概率语言模型：N-gram/" class="article-date">
+  <time datetime="2017-03-12T08:34:41.000Z" itemprop="datePublished">2017-03-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/NLP/">NLP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/12/概率语言模型：N-gram/">概率语言模型：N-gram</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="接近实际情况的概率语言模型实现"><a href="#接近实际情况的概率语言模型实现" class="headerlink" title="接近实际情况的概率语言模型实现"></a>接近实际情况的概率语言模型实现</h2><p><strong>N-gram模型</strong>，详细内容可参考维基百科：<a href="https://en.wikipedia.org/wiki/N-gram">N-gram</a></p>
+<p>上一节，有概率论条件概率公式：</p>
+<p><em>P(w1,w2) = P(w2|w1)✖️P(w1)</em></p>
+<p>条件多的时候：</p>
+<p><em>P(w1,w2,w3) = P(w1,w2)✖️P(w3|w1,w2) = P(w1)✖️P(w2|w1)✖️P(w3|w1,w2)</em></p>
+<p>…<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/03/12/概率语言模型：N-gram/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://minikui.github.io/2017/03/12/概率语言模型：N-gram/" data-id="cj06fke640002i10gw7ixfu0d" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/N-gram/">N-gram</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/概率/">概率</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模型/">模型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自然语言/">自然语言</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-概率语言模型：Naive" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/12/概率语言模型：Naive/" class="article-date">
+  <time datetime="2017-03-12T08:32:16.000Z" itemprop="datePublished">2017-03-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/NLP/">NLP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/12/概率语言模型：Naive/">概率语言模型：Naive</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Naive的概率语言模型实现"><a href="#Naive的概率语言模型实现" class="headerlink" title="Naive的概率语言模型实现"></a>Naive的概率语言模型实现</h2><p>上一节，引出概率语言模型的时候给出的计算句子出现的概率的公式：<br>计算句子的概率：<strong>P(S)=P(w1,w2,w3,…,wn)</strong></p>
+<p>在对公式进行拆解的时候，有：<br><strong>P(w1w2)=P(w2|w1)*P(w1)</strong><br>在此基础上，进行粗糙的假设：<strong>P(w2|w2)≈P(w2)</strong><br>
+        
+          <p class="article-more-link">
+            <a href="/2017/03/12/概率语言模型：Naive/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://minikui.github.io/2017/03/12/概率语言模型：Naive/" data-id="cj06fke680005i10gdc67ots8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Naive/">Naive</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/概率/">概率</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模型/">模型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自然语言/">自然语言</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-机器理解语言" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/12/机器理解语言/" class="article-date">
+  <time datetime="2017-03-12T08:20:58.000Z" itemprop="datePublished">2017-03-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/NLP/">NLP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/12/机器理解语言/">机器理解语言</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="机器是如何理解自然语言的-ch1"><a href="#机器是如何理解自然语言的-ch1" class="headerlink" title="机器是如何理解自然语言的 ch1"></a>机器是如何理解自然语言的 ch1</h2><ul>
+<li><p>机器如何理解自然语言的</p>
+<ol>
+<li><p>词性</p>
+<p> 句子压缩<br> 中文分词</p>
+</li>
+<li>句子成分<br> 主谓宾</li>
+<li><p>概率统计<br> 齐夫定律：词频 ∝ 1/ranks</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E9%BD%8A%E5%A4%AB%E5%AE%9A%E5%BE%8B"><strong>齐夫定律</strong></a>（英语：Zipf’s law，<a href="https://zh.wikipedia.org/wiki/IPA">IPA</a>英语发音：<a href="https://zh.wikipedia.org/wiki/Wikipedia:%E8%8B%B1%E8%AA%9E%E5%9C%8B%E9%9A%9B%E9%9F%B3%E6%A8%99#.E7.AC.A6.E8.99.9F">/ˈzɪf/</a>）是由<a href="https://zh.wikipedia.org/wiki/%E5%93%88%E4%BD%9B%E5%A4%A7%E5%AD%B8">哈佛大学</a>的<a href="https://zh.wikipedia.org/wiki/%E8%AA%9E%E8%A8%80%E5%AD%B8%E5%AE%B6">语言学家</a><a href="https://zh.wikipedia.org/w/index.php?title=%E5%96%AC%E6%B2%BB%C2%B7%E9%87%91%E6%96%AF%E5%88%A9%C2%B7%E9%BD%8A%E5%A4%AB&amp;action=edit&amp;redlink=1"><font color="red">乔治·金斯利·齐夫</font></a>（George Kingsley Zipf）于1949年发表的实验定律。它可以表述为：在<a href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80">自然语言</a>的<a href="https://zh.wikipedia.org/wiki/%E8%AA%9E%E6%96%99%E5%BA%AB">语料库</a>里，一个单词出现的频率与它在频率表里的排名成反比。</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/03/12/机器理解语言/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://minikui.github.io/2017/03/12/机器理解语言/" data-id="cj06fke5z0000i10gyw0ytgky" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/概率/">概率</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模型/">模型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自然语言/">自然语言</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-应该做的事" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -119,7 +274,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://minikui.github.io/2017/03/09/应该做的事/" data-id="cj022cq780000ko0g9lhyq4t7" class="article-share-link">Partager</a>
+      <a data-url="https://minikui.github.io/2017/03/09/应该做的事/" data-id="cj06fke6d0007i10g6s20x69s" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/感悟/">感悟</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日常/">日常</a></li></ul>
@@ -167,7 +322,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://minikui.github.io/2017/03/09/纯白短腿猫日常/" data-id="cj022cq7h0002ko0g71rwc0j6" class="article-share-link">Partager</a>
+      <a data-url="https://minikui.github.io/2017/03/09/纯白短腿猫日常/" data-id="cj06fke6c0006i10gbhqgeaby" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日常/">日常</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/猫/">猫</a></li></ul>
@@ -219,7 +374,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://minikui.github.io/2017/03/07/first-blog/" data-id="cj022cq7z0008ko0gy83pi9o6" class="article-share-link">Partager</a>
+      <a data-url="https://minikui.github.io/2017/03/07/first-blog/" data-id="cj06fke6l000bi10gv1v0iedq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
@@ -266,7 +421,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://minikui.github.io/2017/03/07/hello-world/" data-id="cj022cq7r0006ko0gij6tijxg" class="article-share-link">Partager</a>
+      <a data-url="https://minikui.github.io/2017/03/07/hello-world/" data-id="cj06fke6h000ai10gygsmzccx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -285,9 +440,9 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Kategorier</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/原创/">原创</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/日志/">日志</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/转载/">转载</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/原创/">原创</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/日志/">日志</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/转载/">转载</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -295,9 +450,9 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感悟/">感悟</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日常/">日常</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/猫/">猫</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/N-gram/">N-gram</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Naive/">Naive</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感悟/">感悟</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日常/">日常</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/概率/">概率</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模型/">模型</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/猫/">猫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自然语言/">自然语言</a><span class="tag-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -305,18 +460,18 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/感悟/" style="font-size: 10px;">感悟</a> <a href="/tags/日常/" style="font-size: 20px;">日常</a> <a href="/tags/猫/" style="font-size: 10px;">猫</a>
+      <a href="/tags/N-gram/" style="font-size: 10px;">N-gram</a> <a href="/tags/Naive/" style="font-size: 10px;">Naive</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/感悟/" style="font-size: 10px;">感悟</a> <a href="/tags/日常/" style="font-size: 15px;">日常</a> <a href="/tags/概率/" style="font-size: 20px;">概率</a> <a href="/tags/模型/" style="font-size: 20px;">模型</a> <a href="/tags/猫/" style="font-size: 10px;">猫</a> <a href="/tags/自然语言/" style="font-size: 20px;">自然语言</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Arkiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">7</span></li></ul>
     </div>
   </div>
 
@@ -324,9 +479,21 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Siste innlegg</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/03/12/概率语言模型：N-gram/">概率语言模型：N-gram</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/12/概率语言模型：Naive/">概率语言模型：Naive</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/12/机器理解语言/">机器理解语言</a>
+          </li>
         
           <li>
             <a href="/2017/03/09/应该做的事/">应该做的事</a>
@@ -334,14 +501,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/2017/03/09/纯白短腿猫日常/">纯白短腿猫日常</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/07/first-blog/">基于深度学习的自认语言处理 课程01</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/07/hello-world/">hexo入门</a>
           </li>
         
       </ul>
@@ -357,7 +516,7 @@ ga('send', 'pageview');
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 oldwang<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
