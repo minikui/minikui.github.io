@@ -13,12 +13,12 @@
     <meta name="description" content="整理
 日常学习tips
 
-sublime安装完anaconda以后，写python代码的时候在特殊代码中不能输入左括号”(“)– 原因：是anaconda对python代码进行运行时错误检查导致的– 解决：打开 Sublime-&gt;Preferences-&gt;Package Settings-&gt;Anaconda-&gt;Settings修改 “auto_python_builder_enabled”: tr">
+sublime安装完anaconda以后，写python代码的时候在特殊代码中不能输入左括号”(“)– 原因：是anaconda对python代码补全导致的– 解决：打开 Sublime-&gt;Preferences-&gt;Package Settings-&gt;Anaconda-&gt;Settings修改 “complete_parameters”: true, “complete_a">
   
   <meta name="description" content="整理
 日常学习tips
 
-sublime安装完anaconda以后，写python代码的时候在特殊代码中不能输入左括号”(“)– 原因：是anaconda对python代码进行运行时错误检查导致的– 解决：打开 Sublime-&amp;gt;Preferences-&amp;gt;Package Settings-&amp;gt;Anaconda-&amp;gt;Settings修改 “auto_python_builder_enabled”: tr">
+sublime安装完anaconda以后，写python代码的时候在特殊代码中不能输入左括号”(“)– 原因：是anaconda对python代码补全导致的– 解决：打开 Sublime-&amp;gt;Preferences-&amp;gt;Package Settings-&amp;gt;Anaconda-&amp;gt;Settings修改 “complete_parameters”: true, “complete_a">
 <meta property="og:type" content="article">
 <meta property="og:title" content="整理:Sublime和Jupyter">
 <meta property="og:url" content="https://minikui.github.io/2017/03/25/整理-Sublime和Jupyter/index.html">
@@ -26,17 +26,17 @@ sublime安装完anaconda以后，写python代码的时候在特殊代码中不�
 <meta property="og:description" content="整理
 日常学习tips
 
-sublime安装完anaconda以后，写python代码的时候在特殊代码中不能输入左括号”(“)– 原因：是anaconda对python代码进行运行时错误检查导致的– 解决：打开 Sublime-&amp;gt;Preferences-&amp;gt;Package Settings-&amp;gt;Anaconda-&amp;gt;Settings修改 “auto_python_builder_enabled”: tr">
+sublime安装完anaconda以后，写python代码的时候在特殊代码中不能输入左括号”(“)– 原因：是anaconda对python代码补全导致的– 解决：打开 Sublime-&amp;gt;Preferences-&amp;gt;Package Settings-&amp;gt;Anaconda-&amp;gt;Settings修改 “complete_parameters”: true, “complete_a">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/c59739b1ly1fdzfiuc5twj20ak05udha.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/c59739b1ly1fe0190luxkj21160hc41g.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/c59739b1ly1fe019qoj8pj219d0ow4mf.jpg">
-<meta property="og:updated_time" content="2017-03-26T02:29:23.000Z">
+<meta property="og:updated_time" content="2017-03-26T13:47:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="整理:Sublime和Jupyter">
 <meta name="twitter:description" content="整理
 日常学习tips
 
-sublime安装完anaconda以后，写python代码的时候在特殊代码中不能输入左括号”(“)– 原因：是anaconda对python代码进行运行时错误检查导致的– 解决：打开 Sublime-&amp;gt;Preferences-&amp;gt;Package Settings-&amp;gt;Anaconda-&amp;gt;Settings修改 “auto_python_builder_enabled”: tr">
+sublime安装完anaconda以后，写python代码的时候在特殊代码中不能输入左括号”(“)– 原因：是anaconda对python代码补全导致的– 解决：打开 Sublime-&amp;gt;Preferences-&amp;gt;Package Settings-&amp;gt;Anaconda-&amp;gt;Settings修改 “complete_parameters”: true, “complete_a">
 <meta name="twitter:image" content="http://ww1.sinaimg.cn/large/c59739b1ly1fdzfiuc5twj20ak05udha.jpg">
   
     <link rel="alternate" href="/atom.xml" title="一切可以触摸到的都是代码" type="application/atom+xml">
@@ -107,7 +107,10 @@ sublime安装完anaconda以后，写python代码的时候在特殊代码中不�
       <p><strong>整理</strong></p>
 <h2 id="日常学习tips"><a href="#日常学习tips" class="headerlink" title="日常学习tips"></a>日常学习tips</h2><p><img src="http://ww1.sinaimg.cn/large/c59739b1ly1fdzfiuc5twj20ak05udha.jpg" alt="" title="sublime"></p>
 <ol>
-<li>sublime安装完anaconda以后，写python代码的时候在特殊代码中不能输入左括号”(“)<br>– <strong>原因</strong>：<br>是anaconda对python代码进行运行时错误检查导致的<br>– <strong>解决</strong>：<br>打开 Sublime->Preferences->Package Settings->Anaconda->Settings<br>修改 “auto_python_builder_enabled”: true, true -> false<a id="more"></a></li>
+<li>sublime安装完anaconda以后，写python代码的时候在特殊代码中不能输入左括号”(“)<br>– <strong>原因</strong>：<br>是anaconda对python代码补全导致的<br>– <strong>解决</strong>：<br>打开 Sublime->Preferences->Package Settings->Anaconda->Settings<br>修改<br> “complete_parameters”: true,<br> “complete_all_parameters”: true,</li>
+</ol>
+<a id="more"></a>
+<ol>
 <li><p>Mac安装Anaconda以后，在终端不能直接输入jupyter notebook打开notebook，提示：jupyter: command not found<br>– <strong>原因</strong>：<br>安装Anaconda以后，未添加PATH<br>– <strong>解决</strong>：<br>在终端输入：find . -name “jupyter”<br>然后加入PATH：export $HOME/anaconda/bin:$PATH</p>
 </li>
 <li><p>2修改完以后，再次进入jupyter notebook的时候，可以在终端操作：<br>– <strong>工作目录</strong>：</p>
