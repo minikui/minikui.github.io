@@ -1,0 +1,568 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>Python数据类型：列表和字典 | 一切可以触摸到的都是代码</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="oldwang">
+  
+  
+    <meta name="description" content="这里将列表和字典统一整理，是因为这两者有很多相似之处。这是两种最常见、而且功能最强大的集合体类型。
+列表
+
+任意对象的有序集合
+
+
+偏移量读取
+可变长度、异构以及任意嵌套
+可变序列分类
+属于对象引用的数组
+列表内的项，并不是拷贝，而是对象的引用，和字典一样。
+
+
+
+
+列表操作：">
+  
+  <meta name="description" content="这里将列表和字典统一整理，是因为这两者有很多相似之处。这是两种最常见、而且功能最强大的集合体类型。
+列表
+
+任意对象的有序集合
+
+
+偏移量读取
+可变长度、异构以及任意嵌套
+可变序列分类
+属于对象引用的数组
+列表内的项，并不是拷贝，而是对象的引用，和字典一样。
+
+
+
+
+列表操作：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python数据类型：列表和字典">
+<meta property="og:url" content="https://minikui.github.io/2017/04/09/Python数据类型：列表和字典/index.html">
+<meta property="og:site_name" content="一切可以触摸到的都是代码">
+<meta property="og:description" content="这里将列表和字典统一整理，是因为这两者有很多相似之处。这是两种最常见、而且功能最强大的集合体类型。
+列表
+
+任意对象的有序集合
+
+
+偏移量读取
+可变长度、异构以及任意嵌套
+可变序列分类
+属于对象引用的数组
+列表内的项，并不是拷贝，而是对象的引用，和字典一样。
+
+
+
+
+列表操作：">
+<meta property="og:updated_time" content="2017-04-08T17:00:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python数据类型：列表和字典">
+<meta name="twitter:description" content="这里将列表和字典统一整理，是因为这两者有很多相似之处。这是两种最常见、而且功能最强大的集合体类型。
+列表
+
+任意对象的有序集合
+
+
+偏移量读取
+可变长度、异构以及任意嵌套
+可变序列分类
+属于对象引用的数组
+列表内的项，并不是拷贝，而是对象的引用，和字典一样。
+
+
+
+
+列表操作：">
+  
+    <link rel="alternate" href="/atom.xml" title="一切可以触摸到的都是代码" type="application/atom+xml">
+  
+  
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-80534708-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">一切可以触摸到的都是代码</a></h1>
+    <p><a href="/">coding writing ...</a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2017/04/09/Python数据类型：列表和字典/">
+  <time datetime="2017-04-08T16:16:03.000Z">
+    2017-04-09
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">Python数据类型：列表和字典</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>这里将列表和字典统一整理，是因为这两者有很多相似之处。这是两种最常见、而且功能最强大的集合体类型。</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><hr>
+<ol>
+<li>任意对象的有序集合</li>
+</ol>
+<ul>
+<li>偏移量读取</li>
+<li>可变长度、异构以及任意嵌套</li>
+<li>可变序列分类</li>
+<li>属于对象引用的数组<ul>
+<li>列表内的项，并不是拷贝，而是对象的引用，和字典一样。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>列表操作：</strong></li>
+</ul>
+<a id="more"></a>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">操作</td>
+<td style="text-align:left">解释</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L = []</code></td>
+<td style="text-align:left">空列表</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L = [0，1]</code></td>
+<td style="text-align:left">常量</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L = [&#39;wk&#39;, [&#39;wk&#39;]]</code></td>
+<td style="text-align:left">嵌套</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L = list(&#39;wang&#39;)</code></td>
+<td style="text-align:left">可迭代</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L = list(range(-4, 2))</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L[i]</code></td>
+<td style="text-align:left">索引</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L[i][j]</code></td>
+<td style="text-align:left">二维索引</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L[i:j]</code></td>
+<td style="text-align:left">切片</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>len(L)</code></td>
+<td style="text-align:left">长度</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L1 + L2</code></td>
+<td style="text-align:left">合并</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L * 2</code></td>
+<td style="text-align:left">重复</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>for x in L: print(x)</code></td>
+<td style="text-align:left">迭代</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>2 in L</code></td>
+<td style="text-align:left">成员</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L.append(4)</code></td>
+<td style="text-align:left">追加、插入、排序、搜索等</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L.extend([5, 6])</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L.insert(index, X)</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L.index(1)</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L.Count(X)</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L.sort()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L.reverse()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>del L[k]</code></td>
+<td style="text-align:left">删除等操作</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>del L[i:j]</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L.pop()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L.remove(2)</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L[i:j] = []</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L[i] = 1</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L[i:j] = [4, 5, 6, 7]</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L = [x**2 for x in range(5)]</code></td>
+<td style="text-align:left">列表解析</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>list(map(ord, &#39;spam&#39;))</code></td>
+<td style="text-align:left">map对列表’spam’作ord应用</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>列表是可变的</strong></li>
+</ul>
+<p>可变的意思是列表可以在远处直接修改，修改列表内元素。由于列表内存储的是对象的引用，所以修改以后影响的也是对象的引用。</p>
+<ul>
+<li>支持原处修改，修改操作：索引和切片</li>
+</ul>
+<p><strong>索引赋值：</strong><code>L[index] = &#39;&#39;</code></p>
+<p><strong>切片赋值：</strong><code>L[i:j] = []</code></p>
+<p>切片赋值分两步理解：</p>
+<ol>
+<li>删除。首先删除左边列表中切片内容；</li>
+<li>插入。右侧列表内容插入列表L。</li>
+</ol>
+<p>同时，切片赋值也可以看成列表的切片删除：</p>
+<p><code>L[i:j] = []</code></p>
+<p>既是先删除左侧切片，再赋值右侧。右侧是空列表，所以插入空。</p>
+<p>由切片赋值的代码可以引出一个问题：</p>
+<p><strong><font color="red">思考：L[2:5] = L[3:6]</font> 两个切片有重合，是否可行。</strong></p>
+<blockquote>
+<p>可行，右侧的值在左侧被删除以前就被取出来了。</p>
+</blockquote>
+<ul>
+<li><strong>列表方法：method</strong></li>
+</ul>
+<blockquote>
+<p>方法：<strong>method</strong>是附属于特定对象的函数，实际上是引用函数的属性。对象的一个属性。</p>
+<p>方法提供了特定类型的工具，针对特定类型。</p>
+</blockquote>
+<hr>
+<p><strong>排序<code>sort</code></strong></p>
+<blockquote>
+<p>原地对列表进行排序。</p>
+</blockquote>
+<p><strong><code>sort</code></strong>使用 <strong><code>python</code></strong> 标准的比较检验 做默认值（<em>默认字符串比较</em>），所以可以使用<strong><code>key</code></strong>指定不同的（<strong><code>&quot;name=value&quot;</code></strong>）配置选项比较内容。</p>
+<p>比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">L.sort(key=str.lower)</div><div class="line">L.sort(key=str.lower, reverse=True)</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>warning：<code>append</code></strong>和<strong><code>sort</code></strong>原处修改列表对象，并不返回列表（实际上两者的返回值是<strong><code>None</code></strong>）。<br>所以使用<strong><code>append</code></strong>和<strong><code>sort</code></strong>时，不应该再赋值。</p>
+</blockquote>
+<p>同时，排序可以作为内置函数使用了，可以排序任何集合不仅仅是列表，并返回一个列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sorted(L, key=str.lower, reverse=True)</div><div class="line">sorted([x.lower() for x in L], reverse=True)</div></pre></td></tr></table></figure>
+<p><strong>逆序<code>reversed</code></strong></p>
+<blockquote>
+<p>逆序内置函数<code>reversed</code>需要包装在一个列表内：<br><code>list(reversed(L))</code></p>
+</blockquote>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><hr>
+<ol>
+<li>使用键来读取</li>
+<li>任意对象的无序集合</li>
+<li>可变长、异构、任意嵌套</li>
+<li>属于可变映射类型</li>
+<li>对象引用表<ul>
+<li>和列表一样</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><strong>字典操作</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">操作</td>
+<td style="text-align:left">解释</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D = {}</code></td>
+<td style="text-align:left">空字典</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D = {&#39;spam&#39;:2, &#39;m&#39;:1}</code></td>
+<td style="text-align:left">常量</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D = {&#39;coffee&#39;:{&#39;milk&#39;:1, &#39;water&#39;:0}}</code></td>
+<td style="text-align:left">嵌套</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D = dict.fromkeys([&#39;wk&#39;, &#39;ok&#39;])</code></td>
+<td style="text-align:left">特殊构造函数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D = dict(zip(keyslist, valueslist))</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D = dict(name=&#39;wk&#39;, age=18)</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D[&#39;name&#39;]</code></td>
+<td style="text-align:left">索引</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D[&#39;name&#39;][&#39;firstname&#39;]</code></td>
+<td style="text-align:left">嵌套索引</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&#39;name&#39; in D</code></td>
+<td style="text-align:left">成员</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D.keys()</code></td>
+<td style="text-align:left">键视图</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D.values()</code></td>
+<td style="text-align:left">视图对象：值</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D.items()</code></td>
+<td style="text-align:left">键+值，元组形式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D.copy()</code></td>
+<td style="text-align:left">副本</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D.get(key, default)</code></td>
+<td style="text-align:left">对key默认赋值</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D.update(otherD)</code></td>
+<td style="text-align:left">合并</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D.pop(key)</code></td>
+<td style="text-align:left">删除</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>len(D)</code></td>
+<td style="text-align:left">长度</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D[key] = 1</code></td>
+<td style="text-align:left">修改、赋值</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>del D[key]</code></td>
+<td style="text-align:left">删除</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>list(D.keys())</code></td>
+<td style="text-align:left">键视图</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D1.keys() &amp; D2.keys()</code></td>
+<td style="text-align:left">集合操作</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D = {x: x*2 for x in range(10)}</code></td>
+<td style="text-align:left">字典解析</td>
+</tr>
+</tbody>
+</table>
+<p><strong>创建字典的方式：</strong></p>
+<ol>
+<li><p>可以事先拼出整个字典的时候使用</p>
+<p> <code>{&#39;name&#39; : &#39;wk&#39;, &#39;age&#39; : &#39;18&#39;}</code></p>
+</li>
+<li><p>需要动态的建立字典的时候使用</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">d = &#123;&#125;</div><div class="line">d[&apos;name&apos;] = &apos;wk&apos;</div><div class="line">d[&apos;age&apos;] = 18</div></pre></td></tr></table></figure>
+</li>
+<li><p>需求代码少，可要求键是字符串才行</p>
+<p> <code>d(name = &#39;wk&#39;, age=18)</code> </p>
+</li>
+<li><p>键值在运行时逐步建立序列</p>
+<p> <code>d([(&#39;name&#39;, &#39;wk&#39;), (&#39;age&#39;, 18)])</code></p>
+</li>
+<li><p>和<code>zip</code>一起使用</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">key_list = [&apos;name&apos;, &apos;age&apos;]</div><div class="line">value_list = [&apos;wk&apos;, 18]</div><div class="line">d(zip(key_list, value_list))</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><hr>
+<ul>
+<li><strong>对字典进行迭代操作</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">for x in D:</div><div class="line"> 	print(x)</div></pre></td></tr></table></figure>
+<p>其实隐含的是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">for x in D.keys():</div><div class="line">	print(x)</div></pre></td></tr></table></figure>
+<p>这里，<strong><code>D.keys()</code></strong>在<code>python</code>2和3的表现不同，只是都可以作为迭代器。</p>
+<ul>
+<li><strong>用数字做key，可以使用字典模拟列表的表现。</strong></li>
+<li><strong>避免<code>missing-key</code>错误</strong></li>
+</ul>
+<p>判断字典<code>key</code>是否存在的时候，经常遇到<code>missing-key</code>错误。<br>避免<code>missing-key</code>错误的三种方式：</p>
+<ol>
+<li><p><strong><code>if</code></strong>测试</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">if key in D:</div><div class="line"> 	print(D[key])</div><div class="line">else:</div><div class="line"> 	print(0)</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong><code>try except</code></strong></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">try:</div><div class="line">	print(D[key])</div><div class="line">except KeyError:</div><div class="line">	print(0)</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong><code>get</code></strong>默认值</p>
+<p> <code>D.get(key, 0)</code></p>
+</li>
+</ol>
+<h2 id="python-3中的字典"><a href="#python-3中的字典" class="headerlink" title="python 3中的字典"></a>python 3中的字典</h2><hr>
+<ol>
+<li>支持进阶字典解析表达式</li>
+<li><code>.keys \ .values \ .items</code>，返回可迭代的视图，需要用<code>list()</code></li>
+<li>不再支持相对大小的比较，支持手动比较</li>
+<li>没有<code>.has_key()</code>，使用in成员测试：<code>key in dict</code></li>
+</ol>
+<ul>
+<li><p><strong>字典解析</strong></p>
+<p>于是，字典解析表达式：</p>
+<p><code>{k : v for (k, v) in zip(key_list, value_list)}</code></p>
+</li>
+</ul>
+<p>默认所有键的值相等的时候：<code>dict.fromkeys(key_list, 0)</code></p>
+<ul>
+<li><p><strong>字典视图</strong></p>
+<p>字典的项视图可以和集合混合进行集合操作，除了<code>.values()</code></p>
+<p>这时候，字典视作键视图。</p>
+</li>
+<li><p><strong>字典键排序</strong></p>
+<p>由于<code>.keys()</code>是视图对象，所以想排序需要<code>list(.keys())</code></p>
+<p>也可以使用<code>sorted(.keys()), sorted(dict)</code></p>
+</li>
+<li><p><strong>字典比较</strong></p>
+<p>比较排序后的键：<code>sorted(.items()) &lt; sorted(.items())</code></p>
+</li>
+<li><p><strong>字典<code>hsa_key</code>和<code>in</code></strong></p>
+<p>判断字典成员，<code>in</code>代替<code>has_key</code></p>
+</li>
+</ul>
+
+    
+  </div>
+  <footer>
+    
+      
+  <div class="categories">
+    <a class="categories-link" href="/categories/日常/">日常</a>
+  </div>
+
+      
+  <div class="tags">
+    <a class="tags-link" href="/tags/python/">python</a>, <a class="tags-link" href="/tags/数据类型/">数据类型</a>
+  </div>
+
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+</div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2017 <a href="/">oldwang</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>
