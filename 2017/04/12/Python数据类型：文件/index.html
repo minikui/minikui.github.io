@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Python数据类型：文件 | 一切可以触摸到的都是代码</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Python 文件内置open函数可以创建一个python文件对象，对应操作系统上的一个文件链接。
+操作文件常见文件操作：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python数据类型：文件">
+<meta property="og:url" content="https://minikui.github.io/2017/04/12/Python数据类型：文件/index.html">
+<meta property="og:site_name" content="一切可以触摸到的都是代码">
+<meta property="og:description" content="Python 文件内置open函数可以创建一个python文件对象，对应操作系统上的一个文件链接。
+操作文件常见文件操作：">
+<meta property="og:updated_time" content="2017-04-11T16:17:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python数据类型：文件">
+<meta name="twitter:description" content="Python 文件内置open函数可以创建一个python文件对象，对应操作系统上的一个文件链接。
+操作文件常见文件操作：">
+  
+    <link rel="alternate" href="/atom.xml" title="一切可以触摸到的都是代码" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80534708-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">一切可以触摸到的都是代码</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">coding writing ...</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://minikui.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Python数据类型：文件" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/12/Python数据类型：文件/" class="article-date">
+  <time datetime="2017-04-11T16:12:23.000Z" itemprop="datePublished">2017-04-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/日常/">日常</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python数据类型：文件
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python-文件"><a href="#Python-文件" class="headerlink" title="Python 文件"></a>Python 文件</h1><p>内置<strong><code>open</code></strong>函数可以创建一个<strong>python</strong>文件对象，对应操作系统上的一个文件链接。</p>
+<h2 id="操作文件"><a href="#操作文件" class="headerlink" title="操作文件"></a>操作文件</h2><p>常见文件操作：</p>
+<a id="more"></a>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">操作</td>
+<td style="text-align:left">解释</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>output = open(r&#39;C:\spam&#39;, &#39;w&#39;)</code></td>
+<td style="text-align:left">创建输出文件（’w’写入模式）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>input = open(&#39;data&#39;, &#39;r&#39;)</code></td>
+<td style="text-align:left">创建输入文件（’r’读取模式）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>input = open(&#39;data&#39;)</code></td>
+<td style="text-align:left">输入文件（’r’是默认值）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>string = input.read()</code></td>
+<td style="text-align:left">整个文件读进一个字符串</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>string = input.read(N)</code></td>
+<td style="text-align:left">读取之后的N个字节到一个字符串</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>string = input.readline()</code></td>
+<td style="text-align:left">读取一行含有行末的标识符到一个字符串</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>list = input.readlines()</code></td>
+<td style="text-align:left">读取文件的所有行到一个字符串列表</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>output.write(string)</code></td>
+<td style="text-align:left">写入字节字符串到文件</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>output.writelines(list)</code></td>
+<td style="text-align:left">列表内所有行写入文件</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>output.close()</code></td>
+<td style="text-align:left">close</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>output.flush()</code></td>
+<td style="text-align:left">输出缓冲区刷到硬盘</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>anyFile.seek(N)</code></td>
+<td style="text-align:left">修改文件读取位置到偏移量N处进行下一项操作</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>for line in open(&#39;data&#39;): use line</code></td>
+<td style="text-align:left">文件迭代器，一行一行读取</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>open(&#39;c.txt&#39;, encoding=&#39;latin-1&#39;)</code></td>
+<td style="text-align:left">Python 3 Unicode文本文件（str字符串）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>open(&#39;c.bin&#39;, &#39;rb&#39;)</code></td>
+<td style="text-align:left">Python 3二进制文件（bytes字符串）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="使用文件"><a href="#使用文件" class="headerlink" title="使用文件"></a>使用文件</h2><ul>
+<li>基础操作提示</li>
+</ul>
+<ol>
+<li>文件迭代器是最好的读取行工具</li>
+<li>内容是字符串，not对象</li>
+<li><code>close()</code>是通常选项（强烈建议）</li>
+<li>文件是缓冲的并且时刻查找的</li>
+</ol>
+<ul>
+<li>实际应用中的代码演示（基础）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">myfile = open(&apos;myfile.txt&apos;, &apos;w&apos;)</div><div class="line">myfile.write(&apos;hello text file\n&apos;)</div><div class="line">myfile.write(&apos;goodbye text file\n&apos;)</div><div class="line">myfile.close()</div><div class="line"></div><div class="line">myfile = open(&apos;myfile.txt&apos;)</div><div class="line">myfile.readline()</div><div class="line">myfile.readline()</div></pre></td></tr></table></figure>
+<blockquote>
+<p>写入操作并不替你加入字符串结束符<code>&quot;\n&quot;</code>，若需要，手写。<br>默认文件操作模式是：<code>&#39;r&#39;</code></p>
+</blockquote>
+<h2 id="Python-3中的文本和二进制文件"><a href="#Python-3中的文本和二进制文件" class="headerlink" title="Python 3中的文本和二进制文件"></a>Python 3中的文本和二进制文件</h2><p><strong>python</strong>总是支持文本和二进制文件，在<strong>python 3</strong>中：</p>
+<ul>
+<li>文本文件的内容表示成<strong><code>str</code></strong>字符串，执行<strong>Unicode</strong>编码和解码，默认值行末行转换；</li>
+<li>二进制文件内容表示成一个特殊<strong>bytes</strong>字符串类型，允许程序不修改的访问文件内容。</li>
+</ul>
+<p><strong>Python的编码稍后详解</strong></p>
+<ul>
+<li>文件中存储并解析<strong>Python</strong>对象</li>
+</ul>
+<p><em>摘要：取出文件中的详细文本内容，根据需要，使用相应的对象内置类型函数，</em>如：<code>int() str() list() dict() tuple()</code></p>
+<p><strong>进阶：</strong></p>
+<ol>
+<li><p>用<strong><code>pickle</code></strong>存储<strong>Python</strong>原生对象；</p>
+<p> pickle模块是能够让我们直接在文件中存储几乎任何Python对象的高级工具。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">import pickle</div><div class="line">D = &#123;&apos;name&apos; : &apos;wk&apos;, &apos;age&apos; : 18&#125;</div><div class="line">F = open(&apos;datafile.pkl&apos;, &apos;wb&apos;)</div><div class="line">pickle.dump(D, F)</div><div class="line">F.close()</div><div class="line"></div><div class="line">F = open(&apos;datafile.pkl&apos;, &apos;rb&apos;)</div><div class="line">data = pickle.load(F)</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong><code>struct</code></strong>模块能够构造并解析打包的二进制数据；</p>
+<p> 这里只给出示例，更多内容可以<strong><code>help(struct)</code></strong></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">import struct</div><div class="line">F = open(&apos;data.bin&apos;, &apos;wb&apos;)</div><div class="line">data = struct.pack(&apos;&gt;i4sh&apos;, 7, &apos;wk&apos;, 5)</div><div class="line">F.write(data)</div><div class="line">F.close()</div><div class="line"></div><div class="line">F = open(&apos;data.bin&apos;, &apos;rb&apos;)</div><div class="line">data = F.read()</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="文件上下文"><a href="#文件上下文" class="headerlink" title="文件上下文"></a>文件上下文</h2><p>有两种方式处理：</p>
+<ol>
+<li><p><code>with as</code></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">with open(r&apos;C:\misc\data.txt&apos;) as myfile:</div><div class="line">	for line in myfile:</div><div class="line">		...</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>try finally</code></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">myfile = open(r&apos;C:\misc\data.txt&apos;)</div><div class="line">try:</div><div class="line">	for line in myfile:</div><div class="line">		...</div><div class="line">finally:</div><div class="line">	myfile.close()</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<font color="red">推荐使用：1</font>
+
+<h2 id="其他文件工具"><a href="#其他文件工具" class="headerlink" title="其他文件工具"></a>其他文件工具</h2><p><strong><code>open()</code></strong>函数及其得到的文件对象是<strong>Python</strong>脚本通向外部文件的主要接口，<strong>Python</strong>工具集中还有其他类似的文件工具。</p>
+<ol>
+<li>标准流<ul>
+<li><code>sys</code>模块中预先打开的文件对象</li>
+</ul>
+</li>
+<li><code>os</code>模块中处理的描述文件</li>
+<li><code>sockets pipes</code>和FIFO文件<ul>
+<li>文件类对象</li>
+</ul>
+</li>
+<li>键存取的文件</li>
+<li>Shell命令流</li>
+</ol>
+<h2 id="重访类型分类"><a href="#重访类型分类" class="headerlink" title="重访类型分类"></a>重访类型分类</h2><p><strong>Python</strong>所有实际中核心内置类型，具有共同的一些属性。首先根据类型的类别，给出对所有类型加以分类的列表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>对象类型</strong></td>
+<td style="text-align:center"><strong>分类</strong></td>
+<td style="text-align:center"><strong>是否可变</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">数字</td>
+<td style="text-align:center">数值</td>
+<td style="text-align:center">否</td>
+</tr>
+<tr>
+<td style="text-align:left">字符串</td>
+<td style="text-align:center">序列</td>
+<td style="text-align:center">否</td>
+</tr>
+<tr>
+<td style="text-align:left">列表</td>
+<td style="text-align:center">序列</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:left">字典</td>
+<td style="text-align:center">映射</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:left">元组</td>
+<td style="text-align:center">序列</td>
+<td style="text-align:center">否</td>
+</tr>
+<tr>
+<td style="text-align:left">文件</td>
+<td style="text-align:center">扩展</td>
+<td style="text-align:center">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Sets</code></td>
+<td style="text-align:center">集合</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>frozenset</code></td>
+<td style="text-align:center">集合</td>
+<td style="text-align:center">否</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>bytearray(python 3)</code></td>
+<td style="text-align:center">序列</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>对象根据分类可以共享操作；</li>
+<li>只有可变对象可以在原处修改；</li>
+<li><strong>Files export only methods</strong>，可变性并不适合文件类型的操作；</li>
+<li>“数字”包含所有数字的类型；</li>
+<li>字符串包含<strong><code>str</code></strong>，以及<strong>Python 3</strong>中的<strong>bytes</strong>和<strong>Python 2</strong>中的<strong>unicode</strong>；<strong>Python 3</strong>中的<strong>bytearray</strong>字符串类型是可变的；</li>
+<li>集合类似一个无值的字典的键；</li>
+<li>所有类型都有可调用的method，通常特定于类型；</li>
+</ul>
+<p><strong>|对象灵活性|引用和拷贝|比较、一致性|</strong></p>
+<ul>
+<li>列表、字典和元组可以包含任何种类的对象；</li>
+<li>列表、字典和元组可以任意嵌套；</li>
+<li><p>列表和字典可以扩大和缩小；</p>
+</li>
+<li><p>直接赋值是引用；</p>
+</li>
+<li><code>L[:]</code>可以复制列表，得到拷贝；</li>
+<li>字典<code>D.copy()</code>得到拷贝；</li>
+<li><code>list(L)</code>得到列表拷贝；</li>
+<li><p><code>copy</code>标准库模块：<code>copy.deepcopy()</code>可以拷贝对象内的所有元素；</p>
+</li>
+<li><p><code>&quot;==&quot;</code>操作符测试值的相等性；</p>
+</li>
+<li><code>&quot;is&quot;</code>表达式测试对象的一致性；</li>
+</ul>
+<p><strong>Python 3</strong>不支持数字混合类型的比较，字典的比较也比较特殊：<br><strong><code>items</code></strong>字典method和内置的<strong><code>sorted()</code></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">list(D.items())</div><div class="line">sorted(D.items())</div></pre></td></tr></table></figure>
+<h2 id="Python的类型层次"><a href="#Python的类型层次" class="headerlink" title="Python的类型层次"></a>Python的类型层次</h2><p><strong>Type对象</strong></p>
+<p>类型本身，在Python中也是对象类型。</p>
+<blockquote>
+<p>In fact, even types themselves are an object type in Python: the type of an object is an object of type type </p>
+</blockquote>
+<h2 id="Python中的其他类型"><a href="#Python中的其他类型" class="headerlink" title="Python中的其他类型"></a>Python中的其他类型</h2><p>除核心对象、内置类型以外，还将遇到函数、模块和类。</p>
+<p><strong>内置的类型有针对特殊类的语言生成语法，内置模块需先导入才可以使用：<code>import os</code></strong></p>
+<ul>
+<li>内置类型陷阱</li>
+</ul>
+<ol>
+<li>赋值生成引用，not拷贝；</li>
+<li><p>重复能够增加类型的层次深度；</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">L = [4, 5]</div><div class="line">X = L * 4</div><div class="line">Y = [L] * 4</div></pre></td></tr></table></figure>
+</li>
+<li><p>Beware of Cyclic Data Structures;</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">L = [&apos;xxxxx&apos;]</div><div class="line">L.append(L)</div><div class="line">L</div><div class="line">[&apos;xxxxx&apos;, [...]]</div></pre></td></tr></table></figure>
+</li>
+<li><p>不可变类型不可以在远处修改；</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://minikui.github.io/2017/04/12/Python数据类型：文件/" data-id="cj1dqxyzc000lqcs69p03uyud" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据类型/">数据类型</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/10/Python数据类型：元组/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Python数据类型：元组</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/个人/">个人</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/原创/">原创</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/日常/">日常</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/日志/">日志</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/转载/">转载</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/N-gram/">N-gram</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Naive/">Naive</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/anaconda/">anaconda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyter-notebook/">jupyter notebook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/情感分析/">情感分析</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感悟/">感悟</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/改变/">改变</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据类型/">数据类型</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日常/">日常</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/有监督学习/">有监督学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/概率/">概率</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模型/">模型</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/猫/">猫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自然语言/">自然语言</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/N-gram/" style="font-size: 10px;">N-gram</a> <a href="/tags/Naive/" style="font-size: 10px;">Naive</a> <a href="/tags/anaconda/" style="font-size: 10px;">anaconda</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jupyter-notebook/" style="font-size: 10px;">jupyter notebook</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/情感分析/" style="font-size: 10px;">情感分析</a> <a href="/tags/感悟/" style="font-size: 12.5px;">感悟</a> <a href="/tags/改变/" style="font-size: 10px;">改变</a> <a href="/tags/数据类型/" style="font-size: 15px;">数据类型</a> <a href="/tags/日常/" style="font-size: 15px;">日常</a> <a href="/tags/有监督学习/" style="font-size: 10px;">有监督学习</a> <a href="/tags/机器学习/" style="font-size: 10px;">机器学习</a> <a href="/tags/概率/" style="font-size: 15px;">概率</a> <a href="/tags/模型/" style="font-size: 17.5px;">模型</a> <a href="/tags/猫/" style="font-size: 10px;">猫</a> <a href="/tags/自然语言/" style="font-size: 15px;">自然语言</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/12/Python数据类型：文件/">Python数据类型：文件</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/10/Python数据类型：元组/">Python数据类型：元组</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/09/Python数据类型：列表和字典/">Python数据类型：列表和字典</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/08/说说改变/">说说改变</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/25/整理-Sublime和Jupyter/">整理:Sublime和Jupyter</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 oldwang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
