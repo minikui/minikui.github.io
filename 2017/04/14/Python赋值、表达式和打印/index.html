@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="个人博客，记载学习编程，python">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="oldwang">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Python赋值、表达式和打印"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="个人博客，记载学习编程，python" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="一切可以触摸到的都是代码"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Python赋值、表达式和打印 - 一切可以触摸到的都是代码</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-80534708-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="一切可以触摸到的都是代码">
+            <img src="http://i2.muimg.com/567571/8a2124f1ef084598.png" class="dib h3" alt="一切可以触摸到的都是代码">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about" 
+                    title="About">
+                    About
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Python赋值、表达式和打印</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-04-14</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/python/">#python</a> <a class="fw3 ph1 dib" href="/tags/赋值/">#赋值</a> <a class="fw3 ph1 dib" href="/tags/表达式/">#表达式</a> <a class="fw3 ph1 dib" href="/tags/打印/">#打印</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="赋值、表达式和打印"><a href="#赋值、表达式和打印" class="headerlink" title="赋值、表达式和打印"></a>赋值、表达式和打印</h1><p>本文学习Python中的赋值语句，以及表达式和打印语句。</p>
+<h2 id="赋值语句"><a href="#赋值语句" class="headerlink" title="赋值语句"></a>赋值语句</h2><p><strong>将等号右侧的对象的引用赋值给等号左侧的变量名</strong></p>
+<p>需记住：</p>
+<ul>
+<li>赋值语句建立对象的引用值，也就是赋值语句是将对象的引用值存储在变量名或者数据结构的元素内</li>
+<li>变量名在首次赋值时被创建，出现在表达式中的变量名，被其所引用的对象的值取代；</li>
+<li>变量名在引用前一定先赋值；</li>
+<li>Python也执行隐式赋值，如：模块导入、函数和类的定义、for语句以及函数参数全是隐式赋值；</li>
+</ul>
+<a id="more"></a>
+<h2 id="赋值语句的形式"><a href="#赋值语句的形式" class="headerlink" title="赋值语句的形式"></a>赋值语句的形式</h2><p>赋值语句形式表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>运算</strong></td>
+<td style="text-align:left"><strong>解释</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>spam = &#39;Spam&#39;</code></td>
+<td style="text-align:left">基本形式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>spam, ham = &#39;yum&#39;, &#39;YUM&#39;</code></td>
+<td style="text-align:left">元组赋值（位置性）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>[spam, ham] = [&#39;yum&#39;, &#39;YUM&#39;]</code></td>
+<td style="text-align:left">列表赋值（位置性）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>a, b, c, d = &#39;spam&#39;</code></td>
+<td style="text-align:left">序列赋值，通用性</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>a, *b = &#39;spam&#39;</code></td>
+<td style="text-align:left">扩展的序列解包</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>spam = ham = &#39;ok&#39;</code></td>
+<td style="text-align:left">多目标赋值</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>spam += 2</code></td>
+<td style="text-align:left">增强赋值</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>表中第一种是最常见的，现在对其他几种做一些解释：</p>
+<ul>
+<li>元组及列表分解赋值<ul>
+<li>表中第二第三种，Python按照位置将右边的对象和左边的目标从左到右配对。从内部实现来看，Python先在右边制作元素的元组。</li>
+</ul>
+</li>
+<li>序列赋值语句<ul>
+<li>元组及列表分解赋值语句已经统一成现在序列赋值语句。任何变量名的序列都可以赋值给任何值的序列。</li>
+</ul>
+</li>
+<li>扩展的序列解包<ul>
+<li>左边变量前加“*”号，可以将右侧剩余的对象匹配赋值，如表中第五行。</li>
+</ul>
+</li>
+<li>多重目标赋值<ul>
+<li>Python赋值相同对象的引用值给左侧的所有变量。同样的对象具有不同的引用值变量。</li>
+</ul>
+</li>
+<li>增强赋值语句<ul>
+<li>以一种简洁的方式结合表达式和赋值语句的简写形式，如“+=”。这种形式输入少，执行快。</li>
+<li>Python中，每个二元表达式运算符都有增强赋值语句。<strong>操作的主题若是可变的并且支持这一操作，增强赋值选择原处修改而不是对象副本，所以执行快。</strong></li>
+</ul>
+</li>
+</ul>
+<p>结合上表，解析不同的赋值语句。</p>
+<h2 id="序列赋值"><a href="#序列赋值" class="headerlink" title="序列赋值"></a>序列赋值</h2><ul>
+<li><p>常见序列赋值</p>
+<ul>
+<li><p>举例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">name, age = &apos;wk&apos;, 18    //元组赋值</div><div class="line">[name, age] = [&apos;wk&apos;, 18]   //列表赋值</div><div class="line">// 进阶应用</div><div class="line">[name, age] = (&apos;wk&apos;, 18)</div><div class="line">(n1, n2) = &quot;wk&quot;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>高级序列赋值语句模式</p>
+<ul>
+<li><p>举例，左右两侧数量应相等</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">string = &apos;spam&apos;</div><div class="line">a, b, c, d = string</div><div class="line">a, b, c = string    //error:ValueError</div></pre></td></tr></table></figure>
+</li>
+<li><p>这里的错误采用切片可以解决</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">a, b, c = string[0], string[1], string[2:]</div><div class="line">a, b, c = list(string[:2]) + [string[2:]]</div><div class="line">a, b = string[:2]</div><div class="line">c = string[2:]</div><div class="line">(a, b), c = string[:2], string[2:]</div></pre></td></tr></table></figure>
+</li>
+<li><p>最后给出的示例，可以应用到<code>for</code>语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">for (a, b, c) in [(1, 2, 3), (4, 5, 6)]:</div><div class="line">for ((a, b), c) in [((1, 2), 3), ((4, 5), 6)]:</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数的参数传递中也可以使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">def f(((a, b), c)):</div><div class="line">f(((1, 2), 3))</div></pre></td></tr></table></figure>
+</li>
+<li><p>其他使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">r, g, b = range(3)</div><div class="line">// while语句</div><div class="line">L = [1, 2, 3, 4]</div><div class="line">while L:</div><div class="line">    front, L = L[0], L[1:]</div><div class="line">    print(front, L)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Python-3中的扩展序列解包"><a href="#Python-3中的扩展序列解包" class="headerlink" title="Python 3中的扩展序列解包"></a>Python 3中的扩展序列解包</h2><blockquote>
+<p>类似于使用切片操作进行对象引用的赋值，将对象序列拆解成“<strong>前面的</strong>”和“<strong>剩余的</strong>”两部分，赋值给左侧变量，其中带有“*”的变量得到序列部分。</p>
+</blockquote>
+<ul>
+<li><p>常见解包应用</p>
+<ul>
+<li><p>举例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">L = [1, 2, 3, 4]</div><div class="line">a, *b = L   // b = [2, 3, 4]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">*a, b = L // a = [1, 2, 3]</div><div class="line">a, *b, c = L // b = [2, 3]</div><div class="line">a, b, *c = L // c = [3, 4]</div></pre></td></tr></table></figure>
+</li>
+<li><p>不仅是列表，对任何序列类型都有用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">a, *b = &apos;spam&apos; // b = [&apos;p&apos;, &apos;a&apos;, &apos;m&apos;]</div><div class="line">// 类似于切片，可有区别</div><div class="line">S = &apos;spam&apos;</div><div class="line">S[0], S[1:] // S[1:] = &apos;pam&apos;</div></pre></td></tr></table></figure>
+<p><strong>解包赋值得到的是多个匹配项的一个列表，切片是相同类型的一个序列</strong></p>
+<p>while语句可以这样写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">L = [1, 2, 3, 4]</div><div class="line">while L:</div><div class="line">   front, *L = L</div><div class="line">   print(front, L)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>边界情况</p>
+<ul>
+<li><p>假如超出边界，<strong>Python</strong>赋值空列表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">L = [1, 2]</div><div class="line">a, b, *c = L // c = []</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="多目标赋值语句"><a href="#多目标赋值语句" class="headerlink" title="多目标赋值语句"></a>多目标赋值语句</h2><blockquote>
+<p><strong>多目标赋值需要注意的是共享引用</strong></p>
+</blockquote>
+<p>因为同一个对象应用赋值给不同的变量，多个变量对同一个对象享有引用，其中一个对对象作修改的时候，可能直接改变原始对象引用值。</p>
+<ul>
+<li>不可变对象</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">a = b = 0</div><div class="line">a += 1 // a = 1, b = 0</div></pre></td></tr></table></figure>
+<ul>
+<li>可变对象</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">a = b = []</div><div class="line">a.append(1) // a = [1], b = [1]</div></pre></td></tr></table></figure>
+<h2 id="增强赋值语句"><a href="#增强赋值语句" class="headerlink" title="增强赋值语句"></a>增强赋值语句</h2><p>如下表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>x += y</code></td>
+<td style="text-align:center"><code>x &amp;= y</code></td>
+<td style="text-align:center"><code>x -= y</code></td>
+<td style="text-align:center"><code>x &#124;= y</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>X *= Y</code></td>
+<td style="text-align:center"><code>X ^= Y</code></td>
+<td style="text-align:center"><code>X /= Y</code></td>
+<td style="text-align:center"><code>X &gt;&gt;= Y</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>X %= Y</code></td>
+<td style="text-align:center"><code>X &lt;&lt;= Y</code></td>
+<td style="text-align:center"><code>X **= Y</code></td>
+<td style="text-align:center"><code>X //= Y</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>增强赋值语句有三个优点：</p>
+<ol>
+<li>减少输入；</li>
+<li>左侧只计算一次；</li>
+<li>支持原处修改的对象，增强形式直接执行原处的修改操作；</li>
+</ol>
+<p><strong>对3的进阶：</strong></p>
+<p>队列表的操作，增加列表元素时，有合并操作<code>+</code>，以及有原处修改的追加<strong><code>append()</code></strong>和<strong><code>extend()</code></strong>，合并操作<code>+</code>需创建列表复制，执行较慢。所以增强赋值语句选择的是可以原处修改的<strong><code>append()</code></strong>和<strong><code>extend()</code></strong></p>
+<blockquote>
+<p><strong>所以，增强赋值可以影响共享引用</strong></p>
+</blockquote>
+<h2 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h2><p>记住以下几点：</p>
+<ul>
+<li>语法<ul>
+<li>(‘<em>‘ or 字母) + (任意数目的数字、字母 or ‘\</em>‘)</li>
+</ul>
+</li>
+<li>区分大小写</li>
+<li>禁止使用保留字<br>以下是<strong>Python 3</strong>中保留字列表：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>False</code></td>
+<td style="text-align:center"><code>class</code></td>
+<td style="text-align:center"><code>finally</code></td>
+<td style="text-align:center"><code>is</code></td>
+<td style="text-align:center"><code>return</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>None</code></td>
+<td style="text-align:center"><code>continue</code></td>
+<td style="text-align:center"><code>for</code></td>
+<td style="text-align:center"><code>lambda</code></td>
+<td style="text-align:center"><code>try</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>True</code></td>
+<td style="text-align:center"><code>def</code></td>
+<td style="text-align:center"><code>from</code></td>
+<td style="text-align:center"><code>nonlocal</code></td>
+<td style="text-align:center"><code>while</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>and</code></td>
+<td style="text-align:center"><code>del</code></td>
+<td style="text-align:center"><code>global</code></td>
+<td style="text-align:center"><code>not</code></td>
+<td style="text-align:center"><code>with</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>as</code></td>
+<td style="text-align:center"><code>elif</code></td>
+<td style="text-align:center"><code>if</code></td>
+<td style="text-align:center"><code>or</code></td>
+<td style="text-align:center"><code>yield</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>assert</code></td>
+<td style="text-align:center"><code>else</code></td>
+<td style="text-align:center"><code>import</code></td>
+<td style="text-align:center"><code>pass</code></td>
+<td style="text-align:center">``</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>break</code></td>
+<td style="text-align:center"><code>except</code></td>
+<td style="text-align:center"><code>in</code></td>
+<td style="text-align:center"><code>raise</code></td>
+<td style="text-align:center">``</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>对比<strong>Python 2</strong>：</p>
+<ul>
+<li><strong><code>print</code></strong>是一个保留字，是一条语句，不是内置函数；</li>
+<li><strong><code>exec</code></strong>是一个保留字，是一条语句，不是内置函数；</li>
+<li><strong><code>nonlocal</code></strong>不是保留字，不可用；</li>
+</ul>
+<h2 id="表达式语句"><a href="#表达式语句" class="headerlink" title="表达式语句"></a>表达式语句</h2><p>两种情况下，表达式用作语句：</p>
+<ol>
+<li>调用函数和method</li>
+<li>交互模式提示符下打印值</li>
+</ol>
+<p>常见Python表达式语句：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>spam(x, y)</code></td>
+<td style="text-align:left">函数调用</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>spam.x(y)</code></td>
+<td style="text-align:left">method调用</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>spam</code></td>
+<td style="text-align:left">交互模式打印</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>print(a, b, c, sep = &#39;&#39;)</code></td>
+<td style="text-align:left">Python 3打印</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yield x ** 2</code></td>
+<td style="text-align:left">产生表达式语句</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="表达式语句和原处修改"><a href="#表达式语句和原处修改" class="headerlink" title="表达式语句和原处修改"></a>表达式语句和原处修改</h2><blockquote>
+<p><strong>队列表调用<code>append()\sort()\reverse()</code>可以直接在原处修改列表</strong></p>
+</blockquote>
+<h2 id="打印操作"><a href="#打印操作" class="headerlink" title="打印操作"></a>打印操作</h2><p><strong>Python</strong>中，<strong><code>print</code></strong>语句可以实现打印，打印只是对程序员友好的标准输出流的接口而已。</p>
+<p>从技术角度：打印是将一个或多个对象转成文本表达形式，然后发送给标准输出或另一个类似文件的流。</p>
+<ul>
+<li>文件对象方法</li>
+</ul>
+<p>文件对象的写入：<code>file.write(str)</code>。打印操作类似，文件写入是将字符串写入到任意文件，print默认将对象打印到<code>stdout</code>流。不需将对象转成字符串。</p>
+<ul>
+<li>标准输出流</li>
+</ul>
+<p>通常也叫<code>stdout</code>，只是发送一个程序的文本输出的默认地方。还有标准输入流和错误流。</p>
+<p>打印<code>print</code>是<strong>Python 2</strong>和<strong>Python 3</strong>显著的区别：</p>
+<ul>
+<li><strong>Python 3</strong>中，打印是一个内置函数，有参数可以表示特定模式；</li>
+<li><strong>Python 2</strong>中，打印是语句，拥有自己的特定语法；</li>
+</ul>
+<p>由于差异比较大，所以内容较多。</p>
+<h3 id="Python-3中的print函数"><a href="#Python-3中的print函数" class="headerlink" title="Python 3中的print函数"></a>Python 3中的print函数</h3><p><code>print</code>内置函数通常在其自身的一行调用，从技术上讲，<code>return None</code>。参数提供特殊操作模式。</p>
+<ul>
+<li><p><strong>调用格式</strong></p>
+<blockquote>
+<p><code>print([object, ...][, sep=&#39; &#39;][, end=&#39;\n&#39;][, file=sys.stdout])</code></p>
+</blockquote>
+<p>  其中，<code>[]</code>内的项都是可选，并提供缺省值。意思是：用<code>sep</code>分割<code>object</code>的文本表示，后跟字符串<code>end</code>，都打印到流<code>file</code>中。</p>
+<ul>
+<li><code>sep</code>是在每个对象的文本之间插入的一个字符串，默认是空格；</li>
+<li><code>end</code>是打印文件行结束的一个字符串，默认是<code>\n</code></li>
+<li><code>file</code>指定文本将要发送到的文件、标准流护着其他类似的文件对象，默认是<code>sys.stdout</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>尝试使用每一个参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">print() // return None</div><div class="line">n = &apos;wk&apos;</div><div class="line">a = 18</div><div class="line">m = [&apos;wk&apos;, 18]</div><div class="line">print(n, a, m)</div><div class="line">print(n, a, m, sep=&apos;&apos;)</div><div class="line">print(n, a, m, sep=&apos;, &apos;)</div><div class="line">print(n, a, m, end=&apos;&apos;)</div><div class="line">print(n, a, m, end=&apos;...\n&apos;)</div><div class="line">print(n, a, m, sep=&apos;...&apos;, end=&apos;!\n&apos;)</div><div class="line">print(n, a, m, end=&apos;!\n&apos;, sep=&apos;...&apos;)</div></pre></td></tr></table></figure>
+<p><code>file</code>参数有些特殊：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">print(n, a, m, end=&apos;!\n&apos;, sep=&apos;...&apos;, file=open(&apos;data.txt&apos;, &apos;w&apos;))</div><div class="line">// 将内容直接打印输出到文本文件data.txt</div></pre></td></tr></table></figure>
+<h3 id="Python-2-print语句"><a href="#Python-2-print语句" class="headerlink" title="Python 2 print语句"></a>Python 2 print语句</h3><p><code>print</code>是语句，而不是内置函数。</p>
+<p>Python <code>print</code>语句形式：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Python 2</td>
+<td style="text-align:left">Python 3</td>
+<td style="text-align:left">解释</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>print x, y</code></td>
+<td style="text-align:left"><code>print(x, y)</code></td>
+<td style="text-align:left">文本形式打印到<code>sys.stdout</code>，各项间加空格</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>print x, y,</code></td>
+<td style="text-align:left"><code>print(x, y, end=&#39;&#39;)</code></td>
+<td style="text-align:left">同上，行末不加<code>\n</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>pirnt &gt;&gt; file, x, y</code></td>
+<td style="text-align:left"><code>print(x, y, file=&#39;&#39;)</code></td>
+<td style="text-align:left">文本内容写到<code>file.write</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="应用-1"><a href="#应用-1" class="headerlink" title="应用"></a>应用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">name = &apos;minikui&apos;</div><div class="line">age = 18</div><div class="line">print name, age</div><div class="line">print name, age,</div><div class="line">pirnt name, age</div><div class="line">print name + age</div><div class="line">print &apos;%s...%s&apos; % (name, age)</div></pre></td></tr></table></figure>
+<h2 id="打印流重定向"><a href="#打印流重定向" class="headerlink" title="打印流重定向"></a>打印流重定向</h2><p>即是将打印输出到一个文本文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">print (&apos;hello world&apos;)</div><div class="line">print &apos;hello world&apos;</div><div class="line">// 等价于</div><div class="line">import sys</div><div class="line">sys.stdout.write(&apos;hello world\n&apos;)</div></pre></td></tr></table></figure>
+<p><code>sys.stdout</code>是Python <code>print</code>的技术基础：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">print(X, Y)</div><div class="line">import sys</div><div class="line">sys.stdout.write(str(X) + &apos; &apos; + str(Y) + &apos;\n&apos;)</div></pre></td></tr></table></figure>
+<p>所以，<code>sys.stdout</code>可以被赋值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import sys</div><div class="line">sys.stdout = open(&apos;log.txt&apos;, &apos;a&apos;)</div><div class="line">...</div><div class="line">print(X)</div></pre></td></tr></table></figure>
+<p>这样，以后的每一句<code>print()</code>都是将文本追加到log.txt文件。</p>
+<p>而<strong>Python 3</strong>中只需要指定<code>file</code>参数即可，只影响指定了<code>file</code>参数的调用。</p>
+<h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><ul>
+<li><p>在Python 2中导入</p>
+<blockquote>
+<p><code>from __future__ import print_function</code></p>
+</blockquote>
+<p>  即可像Python 3一样使用。</p>
+</li>
+<li><p>Python 2打印时使用<code>()</code>，得到的是元组</p>
+<p>  <code>print (&#39;&#39;, &#39;&#39;)</code></p>
+</li>
+</ul>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/python/">#python</a> <a class="fw3 ph1 dib" href="/tags/赋值/">#赋值</a> <a class="fw3 ph1 dib" href="/tags/表达式/">#表达式</a> <a class="fw3 ph1 dib" href="/tags/打印/">#打印</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+<div id="disqus_thread" class="mt5">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="http://i4.buimg.com/567571/9f0b50bc9db0c134.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="oldwang">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            这里是我的博客，没什么想说的。我的twitter：<a href="https://twitter.com/2kisme" target="_blank">2kisme</a>
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>Categories</h3>
+    
+        <p>
+            <a href="/categories/日常/">日常</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2017/04/14/Python赋值、表达式和打印/">Python赋值、表达式和打印</a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/14/Python语句简介/">Python语句简介</a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/12/Python数据类型：文件/">Python数据类型：文件</a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/10/Python数据类型：元组/">Python数据类型：元组</a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/09/Python数据类型：列表和字典/">Python数据类型：列表和字典</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://twitter.com/2kisme" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.facebook.com/" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://dribbble.com/" target="_blank">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/minikui/" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://plus.google.com/" target="_blank">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.behance.net/" target="_blank">
+                            <i class="fa fa-behance"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://500px.com/" target="_blank">
+                            <i class="fa fa-500px"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:ohmykui@gmail.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @. All right reserved
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'ohmykui';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+
+</html>
