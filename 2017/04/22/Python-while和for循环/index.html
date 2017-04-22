@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="个人博客，记载学习编程，python">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="oldwang">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Python while和for循环"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="个人博客，记载学习编程，python" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="一切可以触摸到的都是代码"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Python while和for循环 - 一切可以触摸到的都是代码</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-80534708-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="一切可以触摸到的都是代码">
+            <img src="http://i2.muimg.com/567571/8a2124f1ef084598.png" class="dib h3" alt="一切可以触摸到的都是代码">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about" 
+                    title="About">
+                    About
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Python while和for循环</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-04-22</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/python/">#python</a> <a class="fw3 ph1 dib" href="/tags/循环/">#循环</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Python-while和for循环"><a href="#Python-while和for循环" class="headerlink" title="Python while和for循环"></a>Python while和for循环</h1><p>本篇讲解Python的两个主要循环结构：也就是不停重复代码操作的语句。<br>首先是while语句，提供编写通用循环的一种方法；<br>第二种是for语句，用来遍历序列对象内的元素，并对每一个元素执行一个代码块。</p>
+<a id="more"></a>
+<h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><p>while语句是Python语言中最通用的迭代结构。根据顶端测试判断的真假值，选择是否重复执行一个语句块（缩进代码）。</p>
+<h3 id="while一般格式"><a href="#while一般格式" class="headerlink" title="while一般格式"></a>while一般格式</h3><p>首行测试表达式，有一行或多行缩进语句的主体以及一个可选的else部分（warning：控制权离开循环而又没有碰到break语句是执行else部分）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">while &lt;test&gt;:</div><div class="line">	&lt;statements1&gt;</div><div class="line">else:</div><div class="line">	&lt;statements2&gt;</div></pre></td></tr></table></figure>
+<p>举例介绍：</p>
+<ol>
+<li>此例判断条件永远是真，所以print函数一直执行；</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">while True:</div><div class="line">	print(&apos;Type Ctrl-C to stop me!&apos;)</div></pre></td></tr></table></figure>
+<ol>
+<li>此例不停截取字符串，判断是否为空；</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">x = &apos;minikui&apos;</div><div class="line">while x:</div><div class="line">	print(x, end=&apos; &apos;)</div><div class="line">	x = x[1:]</div></pre></td></tr></table></figure>
+<ol>
+<li>此例是比较常见的计数循环，从0一直数到10；</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">a = 0; b = 10</div><div class="line">while a &lt; b:</div><div class="line">	print(a, end=&apos; &apos;)</div><div class="line">	a += 1</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Python并没有<code>do while</code>语句，可以在循环主体语句底部以一个测试和break模拟实现。</strong></p>
+</blockquote>
+<h3 id="break-continue-pass和循环else"><a href="#break-continue-pass和循环else" class="headerlink" title="break, continue, pass和循环else"></a><code>break, continue, pass</code>和循环<code>else</code></h3><p><code>break</code>和<code>continue</code>只有嵌套在循环中才起作用。</p>
+<ul>
+<li>break:<br>  跳出最近所在的循环，跳出整个循环；</li>
+<li>continue:<ul>
+<li>跳出本次循环，跳至循环开头，继续下一次循环；</li>
+</ul>
+</li>
+<li>pass:<ul>
+<li>什么也不做，空占位语句；</li>
+</ul>
+</li>
+<li>循环else块:<ul>
+<li>只有循环正常离开的时候才执行else</li>
+</ul>
+</li>
+</ul>
+<h3 id="一般循环格式"><a href="#一般循环格式" class="headerlink" title="一般循环格式"></a>一般循环格式</h3><p>加入break和continue语句以后，while的一般格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">while &lt;test1&gt;:</div><div class="line">    &lt;statements1&gt;</div><div class="line">    if &lt;test2&gt;: break</div><div class="line">    if &lt;test3&gt;: continue</div><div class="line">else:</div><div class="line">    &lt;statements2&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>pass</strong></li>
+</ul>
+<p>pass语句是不执行代码的占位语句，可以在以后填充操作代码。</p>
+<blockquote>
+<p>在 Python 3中，可以在使用表达式的任何地方使用”…”来省略代码，pass的一种替代。</p>
+</blockquote>
+<ul>
+<li><strong>continue</strong></li>
+</ul>
+<p>continue语句跳至循环顶端的测试。举例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">x = 10</div><div class="line">while x:</div><div class="line">    x -= 1</div><div class="line">    if x % 2 != 0: continue</div><div class="line">    print(x, end=&apos; &apos;)</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>break</strong></li>
+</ul>
+<p>break语句立刻离开循环体，结束循环。碰到break时，之后的循环代码都不执行。举例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">while True:</div><div class="line">    name = input(&apos;Enter name:&apos;)</div><div class="line">    if name == &apos;stop&apos;: break</div><div class="line">    age = input(&apos;Enter age:&apos;)</div><div class="line">    print(&apos;Hello&apos;, name, &apos;=&gt;&apos;, int(age) ** 2)</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>循环else</strong></li>
+</ul>
+<p>通常结合break使用的特殊情况：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">x = y // 2</div><div class="line">while x &gt; 1:</div><div class="line">    if y % x == 0:</div><div class="line">        print(y, &apos;has factor&apos;, x)</div><div class="line">        break                       // 遇到break，直接无视else部分</div><div class="line">    x -= 1</div><div class="line">else:</div><div class="line">    print(y, &apos;is prime&apos;)</div></pre></td></tr></table></figure>
+<p>若是循环主体部分没有执行，循环else分句也执行。</p>
+<p><strong>more about else</strong></p>
+<p>else分句是Python特有的。举例“搜索列表值”对比else的作用：</p>
+<ul>
+<li>不使用else分句：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">found = False</div><div class="line">while x and not found:</div><div class="line">    if match(x[0]):</div><div class="line">        print(&apos;Ni&apos;)</div><div class="line">        found = True</div><div class="line">    else:</div><div class="line">        x = x[1:]</div><div class="line">if not found:</div><div class="line">    print(&apos;not found&apos;)</div></pre></td></tr></table></figure>
+<ul>
+<li>使用else分句：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">while x:</div><div class="line">    if match(x[0])</div><div class="line">        print(&apos;Ni&apos;)</div><div class="line">        break</div><div class="line">    x = x[1:]</div><div class="line">else:</div><div class="line">    print(&apos;not found&apos;)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>Python 应该是表达式出现的场合，不能出现赋值语句。</p>
+</blockquote>
+<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><p>for循环在Python中是一个通用的序列迭代器：可以遍历任何有序的序列对象内的元素。可用于字符串、列表、元组、其他内置可迭代对象以及之后我们使用类创建的对象。</p>
+<h3 id="一般格式"><a href="#一般格式" class="headerlink" title="一般格式"></a>一般格式</h3><p>for循环首行定义了一个赋值目标，以及你想遍历的对象。后面是你想重复的语句块。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">for &lt;target&gt; in &lt;object&gt;:</div><div class="line">    &lt;statements&gt;</div><div class="line">else:</div><div class="line">    &lt;statements&gt;</div></pre></td></tr></table></figure>
+<p>Python执行for循环的时候，逐个将序列对象中的元素赋值给目标，然后为每个元素执行循环主体。主体一般使用赋值的目标引用序列中的元素，像是序列的游标。</p>
+<p>加入break和continue以后：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">for &lt;target&gt; in &lt;object&gt;:</div><div class="line">    &lt;statements&gt;</div><div class="line">    if &lt;test&gt;: break</div><div class="line">    if &lt;test&gt;: continue</div><div class="line">else:</div><div class="line">    &lt;statements&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>基本应用</strong><br>for循环遍历任何一种序列对象。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">prod = 1</div><div class="line">for i in [1, 2, 3, 4]: prod *= i</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>其他数据类型</strong><br>任何序列都适用for循环，例如字符串和元组。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">S = &apos;minikui&apos;</div><div class="line">T = (&apos;name&apos;, &apos;age&apos;, 18)</div><div class="line">for x in S: print(x, end=&apos; &apos;)</div><div class="line">for x in T: print(x, end=&apos; &apos;)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>for循环甚至可以应用到一些不是序列的对象上，比如字典和文件。</p>
+</blockquote>
+<ul>
+<li><strong>for循环中的元组赋值</strong><br>元组解包赋值的一个例子。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">T = [(1, 2), (3, 4), (5, 6)]</div><div class="line">for (a, b) in T:</div><div class="line">    print(a, b)</div></pre></td></tr></table></figure>
+<p>循环中的元组赋值使得使用items方法来遍历字典中的键和值更方便，不必再遍历键索引获取值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">D = &#123;&apos;name&apos; : &apos;minikui&apos;, &apos;age&apos; : 18&#125;</div><div class="line">for key in D:</div><div class="line">    print(key, &apos;=&gt;&apos;, D[key])</div><div class="line"></div><div class="line">list(D.items())</div><div class="line">for (key, value) in D.items():</div><div class="line">    print(key, &apos;=&gt;&apos;, value)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>for循环的元组解包赋值只是元组赋值的一种实现，并不特殊。<br>即使嵌套的：</p>
+</blockquote>
+<p><code>for ((a, b), c) in [((1, 2), 3), ((4, 5), 6)]: print(a, b, c)</code></p>
+<h3 id="Python-3在for循环中扩展的序列赋值"><a href="#Python-3在for循环中扩展的序列赋值" class="headerlink" title="Python 3在for循环中扩展的序列赋值"></a>Python 3在for循环中扩展的序列赋值</h3><p>主要体现是Python 3的扩展序列解包赋值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">for (a, *b, c) in [(1, 2, 3, 4), (5, 6, 7, 8)]:</div><div class="line">    print(a, b, c)</div></pre></td></tr></table></figure>
+<h2 id="嵌套for循环"><a href="#嵌套for循环" class="headerlink" title="嵌套for循环"></a>嵌套for循环</h2><p>代码在对象列表中搜索每个键，匹配搜索：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">items = [&apos;name&apos;, 18, (1, 2), 11.0]</div><div class="line">tests = [(1, 2), 1.1]</div><div class="line"></div><div class="line">for key in tests:</div><div class="line">    for item in items:</div><div class="line">        if item == key:</div><div class="line">            print(key, &apos;was found&apos;)</div><div class="line">            break</div><div class="line">    else:</div><div class="line">        print(key, &apos;not found&apos;)</div></pre></td></tr></table></figure>
+<p>使用<code>in</code>成员测试编写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for key in tests:</div><div class="line">    if key in items:</div><div class="line">        print(key, &apos;was found&apos;)</div><div class="line">    else:</div><div class="line">        print(key, &apos;not found&apos;)</div></pre></td></tr></table></figure>
+<p>用for循环做集合交集处理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">seq1 = &apos;minikui&apos;</div><div class="line">seq2 = &apos;kui&apos;</div><div class="line"></div><div class="line">res = []</div><div class="line">for x in seq1:</div><div class="line">    if x in seq2:</div><div class="line">        res.append(x)</div></pre></td></tr></table></figure>
+<h2 id="编写循环的技巧"><a href="#编写循环的技巧" class="headerlink" title="编写循环的技巧"></a>编写循环的技巧</h2><p>for循环包括多数计数器式的循环。for比while要更容易编写，执行也比较快。<br>Python提供了两个内置函数，在for循环内定制迭代：</p>
+<ul>
+<li>内置<code>range()</code>函数返回一系列连续增加的整数，可作for中索引；</li>
+<li>内置<code>zip()</code>函数返回并行元素的元组的列表，可在for内遍历数个列表；</li>
+</ul>
+<h3 id="循环计数器：while和range"><a href="#循环计数器：while和range" class="headerlink" title="循环计数器：while和range"></a>循环计数器：while和range</h3><p>在Python 3种，range是一个迭代器，根据需要产生元素。使用range的时候，更多的是使用索引来操作序列内元素，for循环本身处理了迭代的细节，不需要使用range</p>
+<blockquote>
+<p>建议：尽可能多选择for，而不要使用range。</p>
+</blockquote>
+<h3 id="非完全遍历：range和切片"><a href="#非完全遍历：range和切片" class="headerlink" title="非完全遍历：range和切片"></a>非完全遍历：range和切片</h3><p>在循环的时候，想要避开一些值，可以使用range和切片实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// range</div><div class="line">S = &apos;minikui&apos;</div><div class="line">list(range(0, len(S), 2))</div><div class="line">for i in range(0, len(S), 2): print(S[i], end=&apos; &apos;)</div><div class="line"></div><div class="line">// 切片</div><div class="line">for c in S[::2]: print(c, end=&apos; &apos;)</div></pre></td></tr></table></figure>
+<h2 id="for循环修改列表：range"><a href="#for循环修改列表：range" class="headerlink" title="for循环修改列表：range()"></a>for循环修改列表：range()</h2><p>一般情况：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">L = [1, 2, 3, 4, 5]</div><div class="line">for x in L:</div><div class="line">    x += 1</div><div class="line">// L = [1, 2, 3, 4, 5], x = 6</div></pre></td></tr></table></figure>
+<p>这里修改的是变量x，而不是列表L。想要修改列表L，需要使用索引。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">L = [1, 2, 3, 4, 5]</div><div class="line">for i in range(len(L)):</div><div class="line">    L[i] += 1</div><div class="line">// L = [2, 3, 4, 5, 6]</div></pre></td></tr></table></figure>
+<h2 id="并行遍历：zip和map"><a href="#并行遍历：zip和map" class="headerlink" title="并行遍历：zip和map"></a>并行遍历：zip和map</h2><p>内置zip函数让我们使用for循环来并行使用多个序列。zip取得一个或多个序列为参数，返回元组的列表，将这些序列中的并排的元素配成对。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">L1 = [1, 2, 3, 4]</div><div class="line">L2 = [5, 6, 7, 8]</div><div class="line"></div><div class="line">// 要合并列表中的元素，可以使用zip创建一个元组对列表（Python 3中，zip也是一个可迭代对象）。</div><div class="line">zip(L1, L2)</div><div class="line">// 从两列表中提取出来的元素配对。</div><div class="line">for (x, y) in zip(L1, L2):</div><div class="line">    print(x, y, &apos;--&apos;, x+y)</div></pre></td></tr></table></figure>
+<p>zip可以接受任何类型的序列（任何可迭代对象，包括文件）。可接受3个参数，参数长度不同时，zip以最短序列的长度截取所得到的元组。</p>
+<ul>
+<li><strong>zip构造字典</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">keys = []</div><div class="line">values = []</div><div class="line">zip(keys, values)</div><div class="line"></div><div class="line">for (k, v) in zip(keys, values): D[k] = v</div><div class="line"></div><div class="line">// 直接传给dict</div><div class="line">D = dict(zip(keys, values))</div></pre></td></tr></table></figure>
+<h3 id="Python-2中的map等价形式"><a href="#Python-2中的map等价形式" class="headerlink" title="Python 2中的map等价形式"></a>Python 2中的map等价形式</h3><p>类似zip配对序列的元素，只是长度不同时，较短的序列用None补齐。</p>
+<blockquote>
+<p>Python 3不再支持此种用途的map，map是Python 3中的一个值生成器。</p>
+</blockquote>
+<p>map带有一个函数，以及一个或多个序列参数，用从序列中取出来的并行元素调用函数。<br><code>list(map(ord, &#39;minikui&#39;))</code></p>
+<h2 id="产生偏移和元素：emumerate"><a href="#产生偏移和元素：emumerate" class="headerlink" title="产生偏移和元素：emumerate"></a>产生偏移和元素：emumerate</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">S = &apos;minikui&apos;</div><div class="line">for (offset, item) in enumerate(S):</div><div class="line">    print(item, &apos;appears at offset&apos;, offset)</div></pre></td></tr></table></figure>
+<p>enumerate函数返回一个生成器对象，支持迭代协议。既是对象有一个__next__方法，由<code>next()</code>内置函数调用，并且循环中每次迭代的时候都返回一个<em>(index, value)</em>的元组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">n = enumerate(S)</div><div class="line"></div><div class="line">next(n) // 不停调用</div><div class="line"></div><div class="line">[c * i for (i, c) in enumerate(S)]</div></pre></td></tr></table></figure>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/python/">#python</a> <a class="fw3 ph1 dib" href="/tags/循环/">#循环</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+<div id="disqus_thread" class="mt5">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="http://i4.buimg.com/567571/9f0b50bc9db0c134.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="oldwang">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            这里是我的博客，没什么想说的。我的twitter：<a href="https://twitter.com/2kisme" target="_blank">2kisme</a>
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>Categories</h3>
+    
+        <p>
+            <a href="/categories/日常/">日常</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2017/04/22/Python-while和for循环/">Python while和for循环</a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/15/if测试和Python语法/">if测试和Python语法</a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/15/转-忧桑的喵星人/">[转]忧桑的喵星人</a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/14/Python赋值、表达式和打印/">Python赋值、表达式和打印</a>
+        </p>
+    
+        <p>
+            <a href="/2017/04/14/Python语句简介/">Python语句简介</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://twitter.com/2kisme" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.facebook.com/" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://dribbble.com/" target="_blank">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/minikui/" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://plus.google.com/" target="_blank">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.behance.net/" target="_blank">
+                            <i class="fa fa-behance"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://500px.com/" target="_blank">
+                            <i class="fa fa-500px"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:ohmykui@gmail.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @. All right reserved
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'ohmykui';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+
+</html>
