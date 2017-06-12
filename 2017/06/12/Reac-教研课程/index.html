@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Python语句简介"/>
+        <meta property="og:title" content="Reac 教研课程"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Python语句简介 - 一切可以触摸到的都是代码</title>
+    <title>Reac 教研课程 - 一切可以触摸到的都是代码</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -117,14 +117,14 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">Python语句简介</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-04-14</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Reac 教研课程</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-06-12</p>
         </div>
     </div>
 
     <!-- Icon -->
     <div class="relative w-100 mw8 center white dn dn-m db-ns">
-        <i class="header-icon fa fa-file-code-o"></i>
+        <i class="header-icon fa fa-file-text-o"></i>
     </div>
 </div>
 
@@ -138,184 +138,91 @@
                     
                         <div class="tags-container-vertical">
                             <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/tags/python/">#python</a> <a class="fw3 ph1 dib" href="/tags/语句/">#语句</a>
+                                <a class="fw3 ph1 dib" href="/tags/课程/">#课程</a>
                             </div>
                         </div>
                     
 
                     <!-- Main Post Content -->
-                    <h1 id="Python语句简介"><a href="#Python语句简介" class="headerlink" title="Python语句简介"></a>Python语句简介</h1><h2 id="重访Python程序结构"><a href="#重访Python程序结构" class="headerlink" title="重访Python程序结构"></a>重访Python程序结构</h2><p>深入学习：</p>
-<ol>
-<li>程序由模块组成</li>
-<li>模块包含语句</li>
-<li>语句包含表达式</li>
-<li>表达式建立并处理对象</li>
-</ol>
-<p>Python语法实质上是由语句和表达式组成。首先给出表来整体理解Python内的语句。</p>
-<a id="more"></a>
-<table>
-<thead>
-<tr>
-<th style="text-align:left"></th>
-<th style="text-align:center"></th>
-<th style="text-align:left"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><strong>语句</strong></td>
-<td style="text-align:center"><strong>角色</strong></td>
-<td style="text-align:left"><strong>例子</strong></td>
-</tr>
-<tr>
-<td style="text-align:left">赋值</td>
-<td style="text-align:center">创建引用值</td>
-<td style="text-align:left"><code>a, b, c = &#39;wk&#39;, &#39;name&#39;, &#39;age&#39;</code></td>
-</tr>
-<tr>
-<td style="text-align:left">调用</td>
-<td style="text-align:center">执行函数</td>
-<td style="text-align:left"><code>log.write(&quot;spam, ham&quot;)</code></td>
-</tr>
-<tr>
-<td style="text-align:left">打印调用</td>
-<td style="text-align:center">打印对象</td>
-<td style="text-align:left"><code>print(&#39;The killer&#39;, joke)</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>if/elif/else</code></td>
-<td style="text-align:center">选择动作</td>
-<td style="text-align:left"><code>if &quot;python&quot; in text: print(text)</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>for/else</code></td>
-<td style="text-align:center">序列迭代</td>
-<td style="text-align:left"><code>for x in mylist: print(x)</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>while/else</code></td>
-<td style="text-align:center">一般循环</td>
-<td style="text-align:left"><code>while X &gt; U: print(&#39;hello&#39;)</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>pass</code></td>
-<td style="text-align:center">空占位符</td>
-<td style="text-align:left"><code>while True: pass</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>break</code></td>
-<td style="text-align:center">循环退出</td>
-<td style="text-align:left"><code>while True:</code><br><code>if test(): break</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>continue</code></td>
-<td style="text-align:center">循环继续</td>
-<td style="text-align:left"><code>while True:</code><br><code>if skip(): continue</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>def</code></td>
-<td style="text-align:center">函数和方法</td>
-<td style="text-align:left"><code>def f(a, b, c=1, *d): print(a+b+c+d[0])</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>return</code></td>
-<td style="text-align:center">函数return</td>
-<td style="text-align:left"><code>def f(a, b, c=1, *d): return a+b+c+d[0]</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>yield</code></td>
-<td style="text-align:center">生成器函数</td>
-<td style="text-align:left"><code>def gen(n):</code><br><code>for i in n: yield i*2</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>global</code></td>
-<td style="text-align:center">命名空间</td>
-<td style="text-align:left"><code>x = &#39;old&#39;</code><br><code>def function():</code><br><code>golbal x, y; x = &#39;new&#39;</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>nonlocal</code></td>
-<td style="text-align:center">Namespaces</td>
-<td style="text-align:left"><code>def outer():</code><br><code>x = &#39;old&#39;</code><br><code>def function():</code><br><code>nolocal x; x = &#39;new&#39;</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>import</code></td>
-<td style="text-align:center">模块访问</td>
-<td style="text-align:left"><code>import sys</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>from</code></td>
-<td style="text-align:center">属性访问</td>
-<td style="text-align:left"><code>from sys import stdin</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>class</code></td>
-<td style="text-align:center">创建对象</td>
-<td style="text-align:left"><code>class Subclass(Superclass):</code><br><code>staticData = []</code><br><code>def method(self): pass</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>try/except/finally</code></td>
-<td style="text-align:center">捕捉异常</td>
-<td style="text-align:left"><code>try:</code><br><code>action()</code><br><code>except:</code><br><code>print(&#39;action error&#39;)</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>raise</code></td>
-<td style="text-align:center">触发异常</td>
-<td style="text-align:left"><code>raise EndSearch(location)</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>assert</code></td>
-<td style="text-align:center">调试检查</td>
-<td style="text-align:left"><code>assert X &gt; Y, &#39;X too small&#39;</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>with/as</code></td>
-<td style="text-align:center">上下文</td>
-<td style="text-align:left"><code>with open(&#39;data&#39;) as myfile: process(myfile)</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>del</code></td>
-<td style="text-align:center">删除应用</td>
-<td style="text-align:left"><code>del data[k]; del data[i:j]; del obj.attr; del variable</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<p><strong>简要解释</strong></p>
+                    <h1 id="React-教程"><a href="#React-教程" class="headerlink" title="React 教程"></a>React 教程</h1><ul>
+<li>React Native 之原生移动应用开发</li>
+</ul>
+<h2 id="LEVEL-0-基础篇"><a href="#LEVEL-0-基础篇" class="headerlink" title="LEVEL 0 : 基础篇"></a>LEVEL 0 : 基础篇</h2><p>课程开篇，完成基础自学。</p>
+<h3 id="chap0-前端"><a href="#chap0-前端" class="headerlink" title="chap0 : 前端"></a>chap0 : 前端</h3><p>前端是基础，可以用1个课时快速总结。</p>
 <ul>
-<li>从技术上讲，<code>print</code>在<strong>Python 3</strong>中不是保留字，也不是语句，而是一个内置的函数调用，所以写成：<code>print()</code>；</li>
-<li><code>yield</code>实际上是一个表达式，而不是一条语句，同时也是一个保留字；</li>
-<li>在<strong>Python 2</strong>中，<code>nonlocal</code>不可用；</li>
-<li><strong>Python 2</strong>中，print是一条语句；</li>
-<li>在Python 2中，<code>try/except</code>和<code>try/finally</code>语句合并了；</li>
-</ul>
-<h2 id="Python语法模型"><a href="#Python语法模型" class="headerlink" title="Python语法模型"></a>Python语法模型</h2><ul>
-<li>一行的结束就是终止该行语句（没有分号）；</li>
-<li>嵌套语句是代码块并且与实际的缩进相对应（没有大括号）；</li>
-<li>Python所有的复合语句都有相同的一般形式，首行以冒号结束，下一行嵌套的代码按照缩进的格式书写；<br>如：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Header line:</div><div class="line">	Nested statement block</div></pre></td></tr></table></figure>
-<h2 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a><font color="red">特殊情况</font></h2><p>虽然Python中都是一行一条语句，可是也有一些特殊情况书写：</p>
-<ol>
-<li><p>一行含有多条</p>
-<p> <code>a = 1; b = 2; print(a + b)</code></p>
+<li><p>HTML\H5</p>
 </li>
-<li><p>一条语句跨越多行代码</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mlist = [111,</div><div class="line">	  222,</div><div class="line">	  333]</div></pre></td></tr></table></figure>
+<li><p>Javascript</p>
 <ul>
-<li>不仅是方括号，”()” “{}”内的代码，也被视作一行。</li>
+<li>部分第三方库</li>
 </ul>
 </li>
-<li><p>代码块特殊实例，代码块的复合语句只有一句的时候</p>
-<p> <code>if x &gt; y: print(x)</code></p>
+<li><p>DOM</p>
 </li>
-</ol>
-<p><strong>以上是本章基础内容，接下来给出一个基础程序代码：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">while True:</div><div class="line">	reply = input(&apos;enter text:&apos;)</div><div class="line">	if reply == &apos;stop&apos;: break</div><div class="line">	elif not reply.isdigit(): print(&apos;error input!&apos; * 7)</div><div class="line">	else:</div><div class="line">		num = int(reply)</div><div class="line">		if num &lt; 20: print(&apos;low&apos;)</div><div class="line">		else: print(num ** 2)</div><div class="line">print(&apos;bye&apos;)</div></pre></td></tr></table></figure>
+<li><p>ES6 标准等</p>
+</li>
+</ul>
+<h2 id="LEVEL-1-入门篇"><a href="#LEVEL-1-入门篇" class="headerlink" title="LEVEL 1 : 入门篇"></a>LEVEL 1 : 入门篇</h2><p>React基础认知，完成一系列React功能实现，感受强大的性能。</p>
+<h3 id="chap1-React-优势的体现"><a href="#chap1-React-优势的体现" class="headerlink" title="chap1 : React 优势的体现"></a>chap1 : React 优势的体现</h3><p>快速展示并掌握React的强大优势，熟悉React的核心部分，创建自定义组件、修改状态、传递props等。认识React的特性。<br>使用一个用户交互的例子，体现特性。</p>
+<ul>
+<li><p>组件：自定义组件</p>
+</li>
+<li><p>属性：设置属性</p>
+</li>
+<li><p>状态：修改状态、响应事件</p>
+</li>
+<li><p>JSX：编写JSX语法结构的代码</p>
+</li>
+<li><p>虚拟DOM：Virtual DOM操作节点</p>
+</li>
+<li><p>数据流 Dataflow：单向数据流、组件间通信</p>
+</li>
+</ul>
+<h2 id="LEVEL-2-进阶篇"><a href="#LEVEL-2-进阶篇" class="headerlink" title="LEVEL 2 : 进阶篇"></a>LEVEL 2 : 进阶篇</h2><p>配合使用React技术栈的强大工具，完成自己的app。</p>
+<h3 id="chap2-React-技术栈"><a href="#chap2-React-技术栈" class="headerlink" title="chap2 : React 技术栈"></a>chap2 : React 技术栈</h3><p>以任务驱动，掌握React的技术栈。<br>如：使用webpack、Redux等创建第一个自己的app。<br>包括React Native的初步使用。</p>
+<ul>
+<li><p>安装 webpack\Redux 等，上手实践</p>
+</li>
+<li><p>React 数据流管理架构之Redux篇</p>
+<ul>
+<li>对比其他数据流架构学习，如：Flux等</li>
+</ul>
+</li>
+<li><p>React Native<br>以一个实际应用的实现来掌握React Native的使用，在开发移动端应用时的优势。</p>
+<ul>
+<li><p>API、样式、移动端模块以及UI组件等</p>
+</li>
+<li><p>实现：计算器应用，初步掌握React Native</p>
+</li>
+</ul>
+</li>
+<li><p>React 实战（ToDo APP项目）<br>逐步实现进阶项目篇，完成待办事项ToDo APP。</p>
+<ul>
+<li>以一个完备的实例理解React Native</li>
+</ul>
+</li>
+</ul>
+<h2 id="LEVEL-3-高级篇"><a href="#LEVEL-3-高级篇" class="headerlink" title="LEVEL 3 : 高级篇"></a>LEVEL 3 : 高级篇</h2><p>组队提升学习，开发比较完整的移动端app。</p>
+<h3 id="chap3-开发移动端高级应用"><a href="#chap3-开发移动端高级应用" class="headerlink" title="chap3 : 开发移动端高级应用"></a>chap3 : 开发移动端高级应用</h3><p>React Native在移动端的强大功能体现，组队完成iOS端实战项目（项目来源以GitHub开源项目为例。）</p>
+<ul>
+<li><p>iOS 项目：<a href="https://github.com/iSimar/HackerNews-React-Native" target="_blank" rel="external">Hacker News</a></p>
+<ul>
+<li>React Native 实现的新闻类阅读APP</li>
+</ul>
+</li>
+<li><p>iOS 项目：<a href="https://github.com/catalinmiron/react-native-dribbble-app" target="_blank" rel="external">Dribbble app</a></p>
+<ul>
+<li>React Native 构建的社区类应用</li>
+</ul>
+</li>
+</ul>
+<p>附图：<img src="https://ooo.0o0.ooo/2017/06/12/593dc135cc85f.png" alt="React"></p>
+
                     
                     <!-- Tags Bottom -->
                     
                         <div class="tags-container-bottom">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/python/">#python</a> <a class="fw3 ph1 dib" href="/tags/语句/">#语句</a>
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/课程/">#课程</a>
                         </div>
                     
 
@@ -353,7 +260,7 @@
     <h3>Categories</h3>
     
         <p>
-            <a href="/categories/日常/">日常</a>
+            <a href="/categories/React/">React</a>
         </p>
     
 </div>
