@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 
-<html lang="en">
+    <html lang="zh-Hans">
   
 <head>
   <meta charset="utf-8">
@@ -21,7 +21,7 @@
   
 
   
-    <meta http-equiv="Content-Language" content="en"/>
+    <meta http-equiv="Content-Language" content="zh-Hans"/>
   
 
   <link href="/img/favicon.png" rel="icon">
@@ -38,6 +38,10 @@
 body{ -webkit-animation: bugfix infinite 1s; }
 @-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
 
+  
+  <!-- Chinese readability improvements -->
+    article {font-weight: 400;letter-spacing: .01rem;}
+    article .entry{line-height:2;}
   
 
   
@@ -62,12 +66,12 @@ body{ -webkit-animation: bugfix infinite 1s; }
 
 
   
+    <!-- 360 Font and Baidu CDN in China -->
     
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400|Playball' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.useso.com/css?family=Open+Sans:300,400|Playball' rel='stylesheet' type='text/css'>
     
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
-
+  <link href='http://apps.bdimg.com/libs/fontawesome/4.1.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
+  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
   
 
 
@@ -88,10 +92,6 @@ body{ -webkit-animation: bugfix infinite 1s; }
 	      <li><a href="/">Home</a></li>
 	    
 	      <li><a href="/archives">Archives</a></li>
-	    
-	      <li><a href="/categories">Category</a></li>
-	    
-	      <li><a href="/tags">Tag</a></li>
 	    
 	      <li><a href="/about">About</a></li>
 	    
@@ -156,14 +156,14 @@ body{ -webkit-animation: bugfix infinite 1s; }
 	
 	  <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="search" name="q" results="0" placeholder="Search">
     <input type="hidden" name="q" value="site:minikui.github.io">
   </form>
 </div>
 	
 	  
 <div class="widget recent-post">
-  <h3 class="title">Neueste Artikel</h3>
+  <h3 class="title">Recent Posts</h3>
   <ul class="entry">
     
       <li>
@@ -192,7 +192,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
 	
 	  
 <div class="widget category">
-  <h3 class="title">Kategorien</h3>
+  <h3 class="title">Categories</h3>
   <ul class="entry">
   
     <li><a href="/categories/NLP/">NLP</a><small>4</small></li>
@@ -308,6 +308,14 @@ body{ -webkit-animation: bugfix infinite 1s; }
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>
 <script src="/js/gallery.js"></script>
 
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
 
 <script type="text/javascript">
