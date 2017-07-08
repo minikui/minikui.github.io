@@ -1,79 +1,74 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html lang="en">
-
-<!-- Head tag -->
+  
 <head>
+  <meta charset="utf-8">
+  
+  <title>自然语言 | 一切可以触摸到的都是代码</title>
+  <meta name="author" content="oldwang">
+  
+  <meta name="description" content="个人博客，记载学习编程，python">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta property="og:site_name" content="一切可以触摸到的都是代码"/>
 
-    <!--Description-->
-    
-        <meta name="description" content="个人博客，记载学习编程，python">
-    
+  
+    <meta property="og:image" content="undefined"/>
+  
 
-    <!--Author-->
-    
-        <meta name="author" content="oldwang">
-    
+  
+    <meta http-equiv="Content-Language" content="en"/>
+  
 
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="一切可以触摸到的都是代码"/>
-    
-
-    <!--Open Graph Description-->
-    
-        <meta property="og:description" content="个人博客，记载学习编程，python" />
-    
-
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="一切可以触摸到的都是代码"/>
-
-    <!--Type page-->
-    
-        <meta property="og:type" content="website" />
+  <link href="/img/favicon.png" rel="icon">
+  
+    <link rel="apple-touch-icon" href="/img/apple-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-icon.png">
     
 
-    <!--Page Cover-->
+  <link rel="alternate" href="/atom.xml" title="一切可以触摸到的都是代码" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  
+  <style type="text/css">
+  /* Tim Pietrusky advanced checkbox hack (Android <= 4.1.2) */
+body{ -webkit-animation: bugfix infinite 1s; }
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
+
+  
+
+  
+    article .post-content-index .entry{max-height: 550px; overflow:hidden;}
+  
+</style>
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80534708-1', 'auto');
+  ga('send', 'pageview');
+ 
+</script>
+
+
+
+
+  
     
-
-    <meta name="twitter:card" content="summary" />
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400|Playball' rel='stylesheet' type='text/css'>
     
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
 
-    <!-- Title -->
-    
-    <title>自然语言 - 一切可以触摸到的都是代码</title>
-
-    <!-- Tachyons Core CSS -->
-    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
-
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Google Analytics -->
-    
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-80534708-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
+  
 
 
 
@@ -81,185 +76,314 @@
 
 
 <body>
+  <header id="header" class="inner"><div class="padding">
+	<div class="alignleft logo">
+	  <h1><a href="/">一切可以触摸到的都是代码</a></h1>
+	</div>
+	<nav id="main-nav" class="alignright">
+		<input type="checkbox" id="toggle" />
+		<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu" onclick><i class="fa fa-bars"></i></label>
+	  <ul class="menu">
+	    
+	      <li><a href="/">Home</a></li>
+	    
+	      <li><a href="/archives">Archives</a></li>
+	    
+	      <li><a href="/categories">Category</a></li>
+	    
+	      <li><a href="/tags">Tag</a></li>
+	    
+	      <li><a href="/about">About</a></li>
+	    
+	    
+	  </ul>
+	</nav>
+	<div class="clearfix"></div>
+</div>
+</header>
+  <div id="page-heading-wrap">
+  	<div class="inner">
+      <div class="padding">
+    		
+          <h2>coding writing ...</h2>
+        
+      </div>
+  	</div>
+  </div>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper" class="padding">
+<h2 class="archive-title tag">自然语言</h2>
 
-<!-- Main Content -->
 
-
-<!-- Banner -->
-<!-- Banner -->
-<div class="w-100 bg-1 ph5-ns ph3 text-light">
+  <div class="archive">
     
-    <nav class="db dt-l w-100 mw8 center border-box pv3">
-        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="一切可以触摸到的都是代码">
-            <img src="http://i2.muimg.com/567571/8a2124f1ef084598.png" class="dib h3" alt="一切可以触摸到的都是代码">
-        </a>
-        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      <article class="post">
+        <div class="post-content-index">
+        <header>
+          <div class="icon"></div>
             
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/" 
-                    title="Home">
-                    Home
-                </a>
+              <h1 class="title transition"><a href="/2017/03/12/概率语言模型：N-gram/" target="_blank">概率语言模型：N-gram</a></h1>
             
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/archives" 
-                    title="Archives">
-                    Archives
-                </a>
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2017-03-12T08:34:41.000Z">2017-03-12</time>
+            </li>
             
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/about" 
-                    title="About">
-                    About
-                </a>
-            
-        </div>
-    </nav>
+              <li>
+                <span class="heading-span">By: </span>
 
-    <!-- Title -->
-    <div class="w-100 mw8 center vh-40 dt">
-        <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns"># 自然语言</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns"></p>
-        </div>
-    </div>
+                
+                  <a href="/">oldwang</a>
+                
 
-    <!-- Icon -->
-    <div class="relative w-100 mw8 center white dn dn-m db-ns">
-        <i class="header-icon fa fa-folder-open"></i>
-    </div>
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      </article>
+    
+      <article class="post">
+        <div class="post-content-index">
+        <header>
+          <div class="icon"></div>
+            
+              <h1 class="title transition"><a href="/2017/03/12/概率语言模型：Naive/" target="_blank">概率语言模型：Naive</a></h1>
+            
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2017-03-12T08:32:16.000Z">2017-03-12</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">oldwang</a>
+                
+
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      </article>
+    
+      <article class="post">
+        <div class="post-content-index">
+        <header>
+          <div class="icon"></div>
+            
+              <h1 class="title transition"><a href="/2017/03/12/机器理解语言/" target="_blank">机器理解语言</a></h1>
+            
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2017-03-12T08:20:58.000Z">2017-03-12</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">oldwang</a>
+                
+
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      </article>
+    
+  </div>
+
+
+
+
+   </div></div>
+    <aside id="sidebar" class="alignright"><div class="padding">
+	
+	  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:minikui.github.io">
+  </form>
+</div>
+	
+	  
+<div class="widget recent-post">
+  <h3 class="title">Neueste Artikel</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2017/06/12/Reac-教研课程/">Reac 教研课程</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/03/resume/">resume</a>
+      </li>
+    
+      <li>
+        <a href="/2017/04/22/Python-while和for循环/">Python while和for循环</a>
+      </li>
+    
+      <li>
+        <a href="/2017/04/15/if测试和Python语法/">if测试和Python语法</a>
+      </li>
+    
+      <li>
+        <a href="/2017/04/15/转-忧桑的喵星人/">[转]忧桑的喵星人</a>
+      </li>
+    
+  </ul>
 </div>
 
-<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
-    <div class="content">
-        <div class="mw8 center">
-            
-                <a href="/2017/03/12/机器理解语言/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
-        <div class="dtc v-mid w-20 black-50">
-            
-                <span class="f4 fw3 lh-copy">Mar 2017</span> 
-            
-        </div>
-        <div class="dtc v-mid w-80 black-70">
-            <span class="f4 fw3 lh-copy">机器理解语言<span>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2017/03/12/概率语言模型：Naive/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
-        <div class="dtc v-mid w-20 black-50">
-            
-                <span class="f4 fw3 lh-copy">Mar 2017</span> 
-            
-        </div>
-        <div class="dtc v-mid w-80 black-70">
-            <span class="f4 fw3 lh-copy">概率语言模型：Naive<span>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2017/03/12/概率语言模型：N-gram/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
-        <div class="dtc v-mid w-20 black-50">
-            
-                <span class="f4 fw3 lh-copy">Mar 2017</span> 
-            
-        </div>
-        <div class="dtc v-mid w-80 black-70">
-            <span class="f4 fw3 lh-copy">概率语言模型：N-gram<span>
-        </div>
-    </div>
-</a>
-            
-        </div>
-    </div>
+	
+	  
+<div class="widget category">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/NLP/">NLP</a><small>4</small></li>
+  
+    <li><a href="/categories/React/">React</a><small>1</small></li>
+  
+    <li><a href="/categories/个人/">个人</a><small>1</small></li>
+  
+    <li><a href="/categories/原创/">原创</a><small>1</small></li>
+  
+    <li><a href="/categories/日常/">日常</a><small>8</small></li>
+  
+    <li><a href="/categories/转载/日常/">日常</a><small>1</small></li>
+  
+    <li><a href="/categories/日志/">日志</a><small>2</small></li>
+  
+    <li><a href="/categories/转载/">转载</a><small>2</small></li>
+  
+  </ul>
 </div>
 
-<!-- Footer -->
-<div class="bg-1 ph2 ph5-ns pv5">
-        <div class="mv8">
-            <div class="center tc">
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://twitter.com/" target="_blank">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://www.facebook.com/" target="_blank">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://dribbble.com/" target="_blank">
-                            <i class="fa fa-dribbble"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://github.com/minikui/" target="_blank">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://plus.google.com/" target="_blank">
-                            <i class="fa fa-google-plus"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://www.behance.net/" target="_blank">
-                            <i class="fa fa-behance"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://500px.com/" target="_blank">
-                            <i class="fa fa-500px"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="mailto:ohmykui@gmail.com" target="_blank">
-                            <i class="fa fa-envelope"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
-                            <i class="fa fa-rss"></i>
-                        </a>
-                    </div>
-                
-            </div>
-            <div class="f6 f5-ns center tc white pt5 fw3">
-                @. All right reserved
-            </div>
-        </div>
-    </div>
+	
+	  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  
+    <a href="/tags/N-gram/">N-gram<small>1</small></a>
+  
+    <a href="/tags/Naive/">Naive<small>1</small></a>
+  
+    <a href="/tags/anaconda/">anaconda<small>1</small></a>
+  
+    <a href="/tags/hexo/">hexo<small>1</small></a>
+  
+    <a href="/tags/jupyter-notebook/">jupyter notebook<small>1</small></a>
+  
+    <a href="/tags/python/">python<small>9</small></a>
+  
+    <a href="/tags/sublime/">sublime<small>1</small></a>
+  
+    <a href="/tags/循环/">循环<small>1</small></a>
+  
+    <a href="/tags/情感分析/">情感分析<small>1</small></a>
+  
+    <a href="/tags/感悟/">感悟<small>2</small></a>
+  
+    <a href="/tags/打印/">打印<small>1</small></a>
+  
+    <a href="/tags/改变/">改变<small>1</small></a>
+  
+    <a href="/tags/数据类型/">数据类型<small>3</small></a>
+  
+    <a href="/tags/日常/">日常<small>3</small></a>
+  
+    <a href="/tags/有监督学习/">有监督学习<small>1</small></a>
+  
+    <a href="/tags/机器学习/">机器学习<small>1</small></a>
+  
+    <a href="/tags/概率/">概率<small>3</small></a>
+  
+    <a href="/tags/模型/">模型<small>4</small></a>
+  
+    <a href="/tags/猫/">猫<small>2</small></a>
+  
+    <a href="/tags/自然语言/">自然语言<small>3</small></a>
+  
+    <a href="/tags/表达式/">表达式<small>1</small></a>
+  
+    <a href="/tags/语句/">语句<small>1</small></a>
+  
+    <a href="/tags/语法/">语法<small>1</small></a>
+  
+    <a href="/tags/课程/">课程<small>1</small></a>
+  
+    <a href="/tags/赋值/">赋值<small>1</small></a>
+  
+</div>
 
-<!-- After Footer -->
-<!-- Disqus Comments -->
+	
+</div></aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="padding">
+	<div class="alignleft">
+	  
+	  &copy; 2017 oldwang
+	  
+	  Powerd by <a href="http://hexo.io/" target="_blank">hexo</a>
+	  and Theme by <a href="https://github.com/halfer53/metro-light" target="_blank">metro-light</a>
+	</div>
+
+	<div class="alignright">
+		
+		
+			<a href="https://github.com/minikui" target="_blank" title="oldwang Github"><i class="fa fa-github-square"></i></a>	
+		
+		
+			<a href="https://twitter.com/2kisme" target="_blank" title="oldwang Twitter"><i class="fa fa-twitter-square"></i></a>	
+		
+		
+		
+		
+		
+	</div>
+
+	<div class="clearfix"></div>
+</div>
+
+<div class="scroll-top"><i class="fa fa-arrow-circle-up"></i></div></footer>
+  
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>
+<script src="/js/gallery.js"></script>
+
+
 
 <script type="text/javascript">
-    var disqus_shortname = 'ohmykui';
+$(window).scroll(function() {
 
-    (function(){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
+    if($(this).scrollTop() > 400) {
+        $('.scroll-top').fadeIn(200);
+    } else {
+        $('.scroll-top').fadeOut(200);
+    }
+});
+
+$('.scroll-top').bind('click', function(e) {
+    e.preventDefault();
+    $('body,html').animate({scrollTop:0},200);
+});
 </script>
 
 
-
 </body>
-
 </html>

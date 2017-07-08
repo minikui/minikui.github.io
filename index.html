@@ -1,79 +1,74 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html lang="en">
-
-<!-- Head tag -->
+  
 <head>
+  <meta charset="utf-8">
+  
+  <title>一切可以触摸到的都是代码</title>
+  <meta name="author" content="oldwang">
+  
+  <meta name="description" content="个人博客，记载学习编程，python">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta property="og:site_name" content="一切可以触摸到的都是代码"/>
 
-    <!--Description-->
-    
-        <meta name="description" content="个人博客，记载学习编程，python">
-    
+  
+    <meta property="og:image" content="undefined"/>
+  
 
-    <!--Author-->
-    
-        <meta name="author" content="oldwang">
-    
+  
+    <meta http-equiv="Content-Language" content="en"/>
+  
 
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="一切可以触摸到的都是代码"/>
-    
-
-    <!--Open Graph Description-->
-    
-        <meta property="og:description" content="个人博客，记载学习编程，python" />
-    
-
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="一切可以触摸到的都是代码"/>
-
-    <!--Type page-->
-    
-        <meta property="og:type" content="website" />
+  <link href="/img/favicon.png" rel="icon">
+  
+    <link rel="apple-touch-icon" href="/img/apple-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-icon.png">
     
 
-    <!--Page Cover-->
+  <link rel="alternate" href="/atom.xml" title="一切可以触摸到的都是代码" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  
+  <style type="text/css">
+  /* Tim Pietrusky advanced checkbox hack (Android <= 4.1.2) */
+body{ -webkit-animation: bugfix infinite 1s; }
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
+
+  
+
+  
+    article .post-content-index .entry{max-height: 550px; overflow:hidden;}
+  
+</style>
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80534708-1', 'auto');
+  ga('send', 'pageview');
+ 
+</script>
+
+
+
+
+  
     
-
-    <meta name="twitter:card" content="summary" />
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400|Playball' rel='stylesheet' type='text/css'>
     
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
 
-    <!-- Title -->
-    
-    <title>一切可以触摸到的都是代码</title>
-
-    <!-- Tachyons Core CSS -->
-    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
-
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Google Analytics -->
-    
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-80534708-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
+  
 
 
 
@@ -81,348 +76,909 @@
 
 
 <body>
-
-<!-- Main Content -->
-<!-- Banner -->
-<!-- Banner -->
-<div class="w-100 bg-1 ph5-ns ph3 text-light">
+  <header id="header" class="inner"><div class="padding">
+	<div class="alignleft logo">
+	  <h1><a href="/">一切可以触摸到的都是代码</a></h1>
+	</div>
+	<nav id="main-nav" class="alignright">
+		<input type="checkbox" id="toggle" />
+		<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu" onclick><i class="fa fa-bars"></i></label>
+	  <ul class="menu">
+	    
+	      <li><a href="/">Home</a></li>
+	    
+	      <li><a href="/archives">Archives</a></li>
+	    
+	      <li><a href="/categories">Category</a></li>
+	    
+	      <li><a href="/tags">Tag</a></li>
+	    
+	      <li><a href="/about">About</a></li>
+	    
+	    
+	  </ul>
+	</nav>
+	<div class="clearfix"></div>
+</div>
+</header>
+  <div id="page-heading-wrap">
+  	<div class="inner">
+      <div class="padding">
+    		
+          <h2>coding writing ...</h2>
+        
+      </div>
+  	</div>
+  </div>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper" class="padding">
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
     
-    <nav class="db dt-l w-100 mw8 center border-box pv3">
-        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="一切可以触摸到的都是代码">
-            <img src="http://i2.muimg.com/567571/8a2124f1ef084598.png" class="dib h3" alt="一切可以触摸到的都是代码">
-        </a>
-        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      <h1 class="title transition"><a href="/2017/06/12/Reac-教研课程/">Reac 教研课程</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2017-06-12T00:27:20.000Z">2017-06-12</time>
+            </li>
             
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/" 
-                    title="Home">
-                    Home
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/archives" 
-                    title="Archives">
-                    Archives
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/about" 
-                    title="About">
-                    About
-                </a>
-            
-        </div>
-    </nav>
+              <li>
+                <span class="heading-span">By: </span>
 
-    <!-- Title -->
-    <div class="w-100 mw8 center vh-40 dt">
-        <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">一切可以触摸到的都是代码</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">coding writing...</p>
-        </div>
-    </div>
+                
+                  <a href="/">oldwang</a>
+                
 
-    <!-- Icon -->
-    <div class="relative w-100 mw8 center white dn dn-m db-ns">
-        <i class="header-icon fa fa fa-magic"></i>
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            <h1 id="React-教程"><a href="#React-教程" class="headerlink" title="React 教程"></a>React 教程</h1><ul>
+<li>React Native 之原生移动应用开发</li>
+</ul>
+<h2 id="LEVEL-0-基础篇"><a href="#LEVEL-0-基础篇" class="headerlink" title="LEVEL 0 : 基础篇"></a>LEVEL 0 : 基础篇</h2><p>课程开篇，完成基础自学。</p>
+<h3 id="chap0-前端"><a href="#chap0-前端" class="headerlink" title="chap0 : 前端"></a>chap0 : 前端</h3><p>前端是基础，可以用1个课时快速总结。</p>
+<ul>
+<li><p>HTML\H5</p>
+</li>
+<li><p>Javascript</p>
+<ul>
+<li>部分第三方库</li>
+</ul>
+</li>
+<li><p>DOM</p>
+</li>
+<li><p>ES6 标准等</p>
+</li>
+</ul>
+<h2 id="LEVEL-1-入门篇"><a href="#LEVEL-1-入门篇" class="headerlink" title="LEVEL 1 : 入门篇"></a>LEVEL 1 : 入门篇</h2><p>React基础认知，完成一系列React功能实现，感受强大的性能。</p>
+<h3 id="chap1-React-优势的体现"><a href="#chap1-React-优势的体现" class="headerlink" title="chap1 : React 优势的体现"></a>chap1 : React 优势的体现</h3><p>快速展示并掌握React的强大优势，熟悉React的核心部分，创建自定义组件、修改状态、传递props等。认识React的特性。<br>使用一个用户交互的例子，体现特性。</p>
+<ul>
+<li><p>组件：自定义组件</p>
+</li>
+<li><p>属性：设置属性</p>
+</li>
+<li><p>状态：修改状态、响应事件</p>
+</li>
+<li><p>JSX：编写JSX语法结构的代码</p>
+</li>
+<li><p>虚拟DOM：Virtual DOM操作节点</p>
+</li>
+<li><p>数据流 Dataflow：单向数据流、组件间通信</p>
+</li>
+</ul>
+<h2 id="LEVEL-2-进阶篇"><a href="#LEVEL-2-进阶篇" class="headerlink" title="LEVEL 2 : 进阶篇"></a>LEVEL 2 : 进阶篇</h2><p>配合使用React技术栈的强大工具，完成自己的app。</p>
+<h3 id="chap2-React-技术栈"><a href="#chap2-React-技术栈" class="headerlink" title="chap2 : React 技术栈"></a>chap2 : React 技术栈</h3><p>以任务驱动，掌握React的技术栈。<br>如：使用webpack、Redux等创建第一个自己的app。<br>包括React Native的初步使用。</p>
+<ul>
+<li><p>安装 webpack\Redux 等，上手实践</p>
+</li>
+<li><p>React 数据流管理架构之Redux篇</p>
+<ul>
+<li>对比其他数据流架构学习，如：Flux等</li>
+</ul>
+</li>
+<li><p>React Native<br>以一个实际应用的实现来掌握React Native的使用，在开发移动端应用时的优势。</p>
+<ul>
+<li><p>API、样式、移动端模块以及UI组件等</p>
+</li>
+<li><p>实现：计算器应用，初步掌握React Native</p>
+</li>
+</ul>
+</li>
+<li><p>React 实战（ToDo APP项目）<br>逐步实现进阶项目篇，完成待办事项ToDo APP。</p>
+<ul>
+<li>以一个完备的实例理解React Native</li>
+</ul>
+</li>
+</ul>
+<h2 id="LEVEL-3-高级篇"><a href="#LEVEL-3-高级篇" class="headerlink" title="LEVEL 3 : 高级篇"></a>LEVEL 3 : 高级篇</h2><p>组队提升学习，开发比较完整的移动端app。</p>
+<h3 id="chap3-开发移动端高级应用"><a href="#chap3-开发移动端高级应用" class="headerlink" title="chap3 : 开发移动端高级应用"></a>chap3 : 开发移动端高级应用</h3><p>React Native在移动端的强大功能体现，组队完成iOS端实战项目（项目来源以GitHub开源项目为例。）</p>
+<ul>
+<li><p>iOS 项目：<a href="https://github.com/iSimar/HackerNews-React-Native" target="_blank" rel="external">Hacker News</a></p>
+<ul>
+<li>React Native 实现的新闻类阅读APP</li>
+</ul>
+</li>
+<li><p>iOS 项目：<a href="https://github.com/catalinmiron/react-native-dribbble-app" target="_blank" rel="external">Dribbble app</a></p>
+<ul>
+<li>React Native 构建的社区类应用</li>
+</ul>
+</li>
+</ul>
+<p>附图：<img src="https://ooo.0o0.ooo/2017/06/12/593dc135cc85f.png" alt="React"></p>
+
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2017/06/12/Reac-教研课程/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
     </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
+    
+      <h1 class="title transition"><a href="/2017/06/03/resume/">resume</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2017-06-03T05:16:10.000Z">2017-06-03</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">oldwang</a>
+                
+
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2017/06/03/resume/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
+    
+      <h1 class="title transition"><a href="/2017/04/22/Python-while和for循环/">Python while和for循环</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2017-04-22T11:15:09.000Z">2017-04-22</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">oldwang</a>
+                
+
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            <h1 id="Python-while和for循环"><a href="#Python-while和for循环" class="headerlink" title="Python while和for循环"></a>Python while和for循环</h1><p>本篇讲解Python的两个主要循环结构：也就是不停重复代码操作的语句。<br>首先是while语句，提供编写通用循环的一种方法；<br>第二种是for语句，用来遍历序列对象内的元素，并对每一个元素执行一个代码块。</p>
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2017/04/22/Python-while和for循环/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
+    
+      <h1 class="title transition"><a href="/2017/04/15/if测试和Python语法/">if测试和Python语法</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2017-04-15T12:08:07.000Z">2017-04-15</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">oldwang</a>
+                
+
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            <h1 id="if测试和Python语法"><a href="#if测试和Python语法" class="headerlink" title="if测试和Python语法"></a>if测试和Python语法</h1><h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><p><code>if</code>语句比较容易，是<strong>Python</strong>的一种流程控制（还有<code>while\for</code>等），判断测试条件真假选择不同的流程分支。</p>
+<p>语句构成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">if &lt;test1&gt;:         // test1 True, 执行state1</div><div class="line">    &lt;state1&gt;</div><div class="line">elif &lt;test2&gt;:       // test2 True, 执行state2</div><div class="line">    &lt;state2&gt;</div><div class="line">else:               // 都是 False, 执行stateOther</div><div class="line">    &lt;stateOther&gt;</div></pre></td></tr></table></figure>
+<p>需要注意的是if复合语句嵌套时候的正确缩进。</p>
+<h2 id="Python语法"><a href="#Python语法" class="headerlink" title="Python语法"></a>Python语法</h2><ul>
+<li>语句是逐行运行，除非使用流程控制语句；</li>
+<li>块和语句的边界使用缩进检测；</li>
+<li>复合语句=首行+ “:” +缩进语句；</li>
+<li>空行、空格以及注释被忽略；</li>
+<li><code>docstring</code>被忽略，可是由工具显示；</li>
+<li>避免混合使用指标符合空格；</li>
+</ul>
+<h3 id="真值测试"><a href="#真值测试" class="headerlink" title="真值测试"></a>真值测试</h3><ul>
+<li>任何非零数或非空对象都是真；</li>
+<li>数字零、空对象以及特殊对象<code>None</code>是假；</li>
+<li>比较和相等测试可以应用到所有的数据结构中；</li>
+<li>布尔<code>and</code>和<code>or</code>返回真或假的操作对象；<ul>
+<li><code>X and Y</code> ：从左至右，返回第一个假值</li>
+<li><code>X or Y</code> ：从左至右，返回第一个真值</li>
+</ul>
+</li>
+</ul>
+<h3 id="if-else三元表达式"><a href="#if-else三元表达式" class="headerlink" title="if/else三元表达式"></a>if/else三元表达式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">if X:</div><div class="line">    A = Y</div><div class="line">else:</div><div class="line">    A = Z</div></pre></td></tr></table></figure>
+<p>可以直接写成：</p>
+<p><code>A = Y if X else Z</code></p>
+<p>也可以：</p>
+<p><code>A = ((X and Y) or Z)</code></p>
+<p>前提是：Y是真值。</p>
+
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2017/04/15/if测试和Python语法/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
+    
+      <h1 class="title transition"><a href="/2017/04/15/转-忧桑的喵星人/">[转]忧桑的喵星人</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2017-04-15T03:39:40.000Z">2017-04-15</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">oldwang</a>
+                
+
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            <p>哈哈，这个要转，，<br>忧桑的喵星人：我的忧伤，你看见了吗？你看，就像我的身体，辣么大，，<br>
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2017/04/15/转-忧桑的喵星人/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
+    
+      <h1 class="title transition"><a href="/2017/04/14/Python赋值、表达式和打印/">Python赋值、表达式和打印</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2017-04-14T00:11:11.000Z">2017-04-14</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">oldwang</a>
+                
+
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            <h1 id="赋值、表达式和打印"><a href="#赋值、表达式和打印" class="headerlink" title="赋值、表达式和打印"></a>赋值、表达式和打印</h1><p>本文学习Python中的赋值语句，以及表达式和打印语句。</p>
+<h2 id="赋值语句"><a href="#赋值语句" class="headerlink" title="赋值语句"></a>赋值语句</h2><p><strong>将等号右侧的对象的引用赋值给等号左侧的变量名</strong></p>
+<p>需记住：</p>
+<ul>
+<li>赋值语句建立对象的引用值，也就是赋值语句是将对象的引用值存储在变量名或者数据结构的元素内</li>
+<li>变量名在首次赋值时被创建，出现在表达式中的变量名，被其所引用的对象的值取代；</li>
+<li>变量名在引用前一定先赋值；</li>
+<li>Python也执行隐式赋值，如：模块导入、函数和类的定义、for语句以及函数参数全是隐式赋值；</li>
+</ul>
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2017/04/14/Python赋值、表达式和打印/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
+    
+      <h1 class="title transition"><a href="/2017/04/14/Python语句简介/">Python语句简介</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2017-04-13T23:39:48.000Z">2017-04-14</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">oldwang</a>
+                
+
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            <h1 id="Python语句简介"><a href="#Python语句简介" class="headerlink" title="Python语句简介"></a>Python语句简介</h1><h2 id="重访Python程序结构"><a href="#重访Python程序结构" class="headerlink" title="重访Python程序结构"></a>重访Python程序结构</h2><p>深入学习：</p>
+<ol>
+<li>程序由模块组成</li>
+<li>模块包含语句</li>
+<li>语句包含表达式</li>
+<li>表达式建立并处理对象</li>
+</ol>
+<p>Python语法实质上是由语句和表达式组成。首先给出表来整体理解Python内的语句。</p>
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2017/04/14/Python语句简介/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
+    
+      <h1 class="title transition"><a href="/2017/04/12/Python数据类型：文件/">Python数据类型：文件</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2017-04-11T16:12:23.000Z">2017-04-12</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">oldwang</a>
+                
+
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            <h1 id="Python-文件"><a href="#Python-文件" class="headerlink" title="Python 文件"></a>Python 文件</h1><p>内置<strong><code>open</code></strong>函数可以创建一个<strong>python</strong>文件对象，对应操作系统上的一个文件链接。</p>
+<h2 id="操作文件"><a href="#操作文件" class="headerlink" title="操作文件"></a>操作文件</h2><p>常见文件操作：</p>
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2017/04/12/Python数据类型：文件/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
+    
+      <h1 class="title transition"><a href="/2017/04/10/Python数据类型：元组/">Python数据类型：元组</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2017-04-10T15:45:25.000Z">2017-04-10</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">oldwang</a>
+                
+
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            <h2 id="python-元组"><a href="#python-元组" class="headerlink" title="python 元组"></a>python 元组</h2><hr>
+<p>由于元组和列表比较相似，所以整理的较少。</p>
+<p>python的最后一个集合类型对象。与列表类似，只是不可以在原处修改。<br>元组的不可变性，指的是元组对象本身不可变，若是元组含有列表等可变元素，元素还是可变的。<br>
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2017/04/10/Python数据类型：元组/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
+    
+      <h1 class="title transition"><a href="/2017/04/09/Python数据类型：列表和字典/">Python数据类型：列表和字典</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2017-04-08T16:16:03.000Z">2017-04-09</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">oldwang</a>
+                
+
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            <p>这里将列表和字典统一整理，是因为这两者有很多相似之处。这是两种最常见、而且功能最强大的集合体类型。</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><hr>
+<ol>
+<li>任意对象的有序集合</li>
+</ol>
+<ul>
+<li>偏移量读取</li>
+<li>可变长度、异构以及任意嵌套</li>
+<li>可变序列分类</li>
+<li>属于对象引用的数组<ul>
+<li>列表内的项，并不是拷贝，而是对象的引用，和字典一样。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>列表操作：</strong></li>
+</ul>
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2017/04/09/Python数据类型：列表和字典/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+
+
+<nav id="pagination">
+  
+  
+    <a href="/page/2/" class="alignright next">Nächste Seite</a>
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright"><div class="padding">
+	
+	  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:minikui.github.io">
+  </form>
+</div>
+	
+	  
+<div class="widget recent-post">
+  <h3 class="title">Neueste Artikel</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2017/06/12/Reac-教研课程/">Reac 教研课程</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/03/resume/">resume</a>
+      </li>
+    
+      <li>
+        <a href="/2017/04/22/Python-while和for循环/">Python while和for循环</a>
+      </li>
+    
+      <li>
+        <a href="/2017/04/15/if测试和Python语法/">if测试和Python语法</a>
+      </li>
+    
+      <li>
+        <a href="/2017/04/15/转-忧桑的喵星人/">[转]忧桑的喵星人</a>
+      </li>
+    
+  </ul>
 </div>
 
-<!-- Content -->
-<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
-    <div class="content">
-        <div class="mw8 center">
-            
-                <a href="/2017/06/12/Reac-教研课程/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2017-06-12</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/课程/'; return false;">#课程</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">Reac 教研课程<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2017/06/03/resume/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2017-06-03</span> 
-                
-                
-            </div>
-            <span class="f3 fw3 lh-copy">resume<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2017/04/22/Python-while和for循环/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2017-04-22</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/python/'; return false;">#python</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/循环/'; return false;">#循环</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">Python while和for循环<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2017/04/15/if测试和Python语法/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2017-04-15</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/python/'; return false;">#python</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/语法/'; return false;">#语法</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">if测试和Python语法<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-code-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2017/04/15/转-忧桑的喵星人/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2017-04-15</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/猫/'; return false;">#猫</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">[转]忧桑的喵星人<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa fa-file-image-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2017/04/14/Python赋值、表达式和打印/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2017-04-14</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/python/'; return false;">#python</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/赋值/'; return false;">#赋值</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/表达式/'; return false;">#表达式</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/打印/'; return false;">#打印</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">Python赋值、表达式和打印<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-code-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2017/04/14/Python语句简介/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2017-04-14</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/python/'; return false;">#python</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/语句/'; return false;">#语句</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">Python语句简介<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-code-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2017/04/12/Python数据类型：文件/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2017-04-12</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/python/'; return false;">#python</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/数据类型/'; return false;">#数据类型</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">Python数据类型：文件<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-code-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2017/04/10/Python数据类型：元组/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2017-04-10</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/python/'; return false;">#python</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/数据类型/'; return false;">#数据类型</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">Python数据类型：元组<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-code-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2017/04/09/Python数据类型：列表和字典/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2017-04-09</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/python/'; return false;">#python</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/数据类型/'; return false;">#数据类型</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">Python数据类型：列表和字典<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-code-o"></i>
-        </div>
-    </div>
-</a>
-            
-        </div>
-    </div>
-    
-    <div class="flex items-center justify-center pa4">
-        <a href="/" 
-            class="f5 no-underline inline-flex items-center pa3 ba border-box mr4 light-gray cursor-default">
-            <i class="w1 pr2 fa fa-chevron-left" aria-hidden="true"></i>
-            <span class="pl1">Previous</span>
-        </a>
-        <a href="/page/2/" 
-            class="f5 no-underline inline-flex items-center pa3 ba border-box gray hover-border-main-color hover-text-main-color">
-            <span class="pr1">Next</span>
-            <i class="w1 pl2 fa fa-chevron-right" aria-hidden="true"></i>
-        </a>
-    </div>
-
+	
+	  
+<div class="widget category">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/NLP/">NLP</a><small>4</small></li>
+  
+    <li><a href="/categories/React/">React</a><small>1</small></li>
+  
+    <li><a href="/categories/个人/">个人</a><small>1</small></li>
+  
+    <li><a href="/categories/原创/">原创</a><small>1</small></li>
+  
+    <li><a href="/categories/日常/">日常</a><small>8</small></li>
+  
+    <li><a href="/categories/转载/日常/">日常</a><small>1</small></li>
+  
+    <li><a href="/categories/日志/">日志</a><small>2</small></li>
+  
+    <li><a href="/categories/转载/">转载</a><small>2</small></li>
+  
+  </ul>
 </div>
 
+	
+	  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  
+    <a href="/tags/N-gram/">N-gram<small>1</small></a>
+  
+    <a href="/tags/Naive/">Naive<small>1</small></a>
+  
+    <a href="/tags/anaconda/">anaconda<small>1</small></a>
+  
+    <a href="/tags/hexo/">hexo<small>1</small></a>
+  
+    <a href="/tags/jupyter-notebook/">jupyter notebook<small>1</small></a>
+  
+    <a href="/tags/python/">python<small>9</small></a>
+  
+    <a href="/tags/sublime/">sublime<small>1</small></a>
+  
+    <a href="/tags/循环/">循环<small>1</small></a>
+  
+    <a href="/tags/情感分析/">情感分析<small>1</small></a>
+  
+    <a href="/tags/感悟/">感悟<small>2</small></a>
+  
+    <a href="/tags/打印/">打印<small>1</small></a>
+  
+    <a href="/tags/改变/">改变<small>1</small></a>
+  
+    <a href="/tags/数据类型/">数据类型<small>3</small></a>
+  
+    <a href="/tags/日常/">日常<small>3</small></a>
+  
+    <a href="/tags/有监督学习/">有监督学习<small>1</small></a>
+  
+    <a href="/tags/机器学习/">机器学习<small>1</small></a>
+  
+    <a href="/tags/概率/">概率<small>3</small></a>
+  
+    <a href="/tags/模型/">模型<small>4</small></a>
+  
+    <a href="/tags/猫/">猫<small>2</small></a>
+  
+    <a href="/tags/自然语言/">自然语言<small>3</small></a>
+  
+    <a href="/tags/表达式/">表达式<small>1</small></a>
+  
+    <a href="/tags/语句/">语句<small>1</small></a>
+  
+    <a href="/tags/语法/">语法<small>1</small></a>
+  
+    <a href="/tags/课程/">课程<small>1</small></a>
+  
+    <a href="/tags/赋值/">赋值<small>1</small></a>
+  
+</div>
 
-<!-- Footer -->
-<div class="bg-1 ph2 ph5-ns pv5">
-        <div class="mv8">
-            <div class="center tc">
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://twitter.com/" target="_blank">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://www.facebook.com/" target="_blank">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://dribbble.com/" target="_blank">
-                            <i class="fa fa-dribbble"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://github.com/minikui/" target="_blank">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://plus.google.com/" target="_blank">
-                            <i class="fa fa-google-plus"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://www.behance.net/" target="_blank">
-                            <i class="fa fa-behance"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://500px.com/" target="_blank">
-                            <i class="fa fa-500px"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="mailto:ohmykui@gmail.com" target="_blank">
-                            <i class="fa fa-envelope"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
-                            <i class="fa fa-rss"></i>
-                        </a>
-                    </div>
-                
-            </div>
-            <div class="f6 f5-ns center tc white pt5 fw3">
-                @. All right reserved
-            </div>
-        </div>
-    </div>
+	
+</div></aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="padding">
+	<div class="alignleft">
+	  
+	  &copy; 2017 oldwang
+	  
+	  Powerd by <a href="http://hexo.io/" target="_blank">hexo</a>
+	  and Theme by <a href="https://github.com/halfer53/metro-light" target="_blank">metro-light</a>
+	</div>
 
-<!-- After Footer -->
-<!-- Disqus Comments -->
+	<div class="alignright">
+		
+		
+			<a href="https://github.com/minikui" target="_blank" title="oldwang Github"><i class="fa fa-github-square"></i></a>	
+		
+		
+			<a href="https://twitter.com/2kisme" target="_blank" title="oldwang Twitter"><i class="fa fa-twitter-square"></i></a>	
+		
+		
+		
+		
+		
+	</div>
+
+	<div class="clearfix"></div>
+</div>
+
+<div class="scroll-top"><i class="fa fa-arrow-circle-up"></i></div></footer>
+  
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>
+<script src="/js/gallery.js"></script>
+
+
 
 <script type="text/javascript">
-    var disqus_shortname = 'ohmykui';
+$(window).scroll(function() {
 
-    (function(){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
+    if($(this).scrollTop() > 400) {
+        $('.scroll-top').fadeIn(200);
+    } else {
+        $('.scroll-top').fadeOut(200);
+    }
+});
+
+$('.scroll-top').bind('click', function(e) {
+    e.preventDefault();
+    $('body,html').animate({scrollTop:0},200);
+});
 </script>
 
 
-
 </body>
-
 </html>
